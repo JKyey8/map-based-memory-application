@@ -31,6 +31,7 @@ app.set("view engine", "ejs")
 app.set("views", "pages")
 
 
+
  
 app.get("/", function(req,res) {
 
@@ -38,7 +39,11 @@ res.render("index")
 
 })
 
+app.get("/profile:userid", function(req,res){
 
+
+res.render("profile")
+})
 
 
 
