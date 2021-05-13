@@ -21,7 +21,8 @@ var PORT = process.env.PORT || 5500;
 module.exports = app; //adding view engine(ejs)
 
 app.set("view engine", "ejs");
-app.set("views", "pages");
+app.set("views", "./views/pages");
+app.set("partials", "./views/partials");
 app.get("/", function (req, res) {
   res.render("index");
 });

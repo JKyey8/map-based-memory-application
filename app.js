@@ -28,8 +28,8 @@ module.exports = app;
 
 //adding view engine(ejs)
 app.set("view engine", "ejs")
-app.set("views", "pages")
-
+app.set("views",  "./views/pages")
+app.set("partials","./views/partials")
 
 
  
