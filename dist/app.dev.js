@@ -26,7 +26,7 @@ app.set("partials", "./views/partials");
 app.get("/", function (req, res) {
   res.render("index");
 });
-app.get("/profile:userid", function (req, res) {
+app.get("/profile/:userid", function (req, res) {
   res.render("profile");
 });
 app.listen(PORT);

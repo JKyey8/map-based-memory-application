@@ -39,7 +39,7 @@ res.render("index")
 
 })
 
-app.get("/profile:userid", function(req,res){
+app.get("/profile/:userid", function(req,res){
 
 
 res.render("profile")
