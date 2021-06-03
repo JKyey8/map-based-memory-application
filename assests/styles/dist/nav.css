@@ -16,12 +16,13 @@ nav a {
   color: blue;
 }
 nav #leftnav {
-  width: 10vw;
+  width: 15vw;
 }
 nav #middlenav {
   display: flex;
+  text-align: center;
   place-content: center;
-  width: 40vw;
+  width: 55vw;
 }
 nav #middlenav form {
   width: 100%;
@@ -36,5 +37,5 @@ nav #middlenav form :focus {
   outline: none;
 }
 nav #middlenav #rightnav {
-  width: 10vw;
+  width: 15vw;
 }

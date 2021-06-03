@@ -4,20 +4,30 @@ var Hendrixpark = [-118.88335, 34.1932084];
 var library = [-118.8547961, 34.2011644];
 var parkbyTOHS = [-118.8724048, 34.2132129];
 var NPHS = [-118.9544604, 34.1844188];
+var snapchatHQ = [-118.4532558, 34.0164097];
 var mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 var mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
+var moviesDescription = "hello";
+var HendrixparkDescription = "hello";
+var libraryDescription = "hello";
+var NPHSDescription = "hello";
 //can change
 var centerMap = movies;
 var mapStyle = mapstyleSteet;
+/*
 var mapboxgl;
+
 var MapboxGeocoder;
-mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3A1cTJmdzMwOTAxMnVzYmQ4OHlmb3JwIn0.VC5-U832snyQzljaNYdDrQ';
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3A1cTJmdzMwOTAxMnVzYmQ4OHlmb3JwIn0.VC5-U832snyQzljaNYdDrQ';
 var map = new mapboxgl.Map({
-    container: "map",
-    style: mapStyle,
-    center: centerMap,
-    zoom: 17 // starting zoom
+container: "map", // container id
+style: mapStyle, // style URL
+center: centerMap, // starting position [lng, lat]
+zoom: 17 // starting zoom
 });
+
+
+*/
 /*
 // Add the control to the map.
 map.addControl(
@@ -76,4 +86,43 @@ document.getElementById("park").addEventListener("click", function () {
         // this animation is considered essential with respect to prefers-reduced-motion
         essential: true
     });
+});
+var searchinput = null;
+document.getElementById("nav-locationsearch").addEventListener("submit", function (e) {
+    e.preventDefault();
+    //@ts-ignore
+    searchinput = document.getElementById('nav-searchbar').value;
+    console.log(searchinput);
+    if (searchinput == "movies") {
+        var target = isAtStart ? movies : centerMap;
+        isAtStart = !isAtStart;
+        map.flyTo({
+            center: target,
+            zoom: 17,
+            speed: 0.8,
+            bearing: 0,
+            curve: 1,
+            easing: function (t) {
+                return t;
+            },
+            // this animation is considered essential with respect to prefers-reduced-motion
+            essential: true
+        });
+    }
+    else if (searchinput == "park") {
+        var target = isAtStart ? parkbyTOHS : centerMap;
+        isAtStart = !isAtStart;
+        map.flyTo({
+            center: target,
+            zoom: 17,
+            speed: 0.8,
+            bearing: 0,
+            curve: 1,
+            easing: function (t) {
+                return t;
+            },
+            // this animation is considered essential with respect to prefers-reduced-motion
+            essential: true
+        });
+    }
 });
