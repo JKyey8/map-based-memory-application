@@ -23,13 +23,16 @@ nav #middlenav {
   place-content: center;
   width: 40vw;
 }
-nav #middlenav input {
+nav #middlenav form {
+  width: 100%;
+}
+nav #middlenav form input {
   border: 2px solid black;
   border-radius: 5px;
   width: 60%;
   height: 3vh;
 }
-nav #middlenav :focus {
+nav #middlenav form :focus {
   outline: none;
 }
 nav #middlenav #rightnav {

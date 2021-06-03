@@ -11,7 +11,10 @@ nav {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 6vh;
+  height: 8vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -28,59 +31,26 @@ nav #middlenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  place-content: center;
   width: 40vw;
 }
 
-nav #middlenav input {
-  border: 1px solid black;
-  width: 50%;
+nav #middlenav form {
+  width: 100%;
+}
+
+nav #middlenav form input {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 60%;
   height: 3vh;
 }
 
-nav #middlenav :focus {
+nav #middlenav form :focus {
   outline: none;
 }
 
-nav #middlenav :focus ::-webkit-input-placeholder {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-nav #middlenav :focus :-ms-input-placeholder {
-  transform: translateX(0%);
-}
-
-nav #middlenav :focus ::-ms-input-placeholder {
-  transform: translateX(0%);
-}
-
-nav #middlenav :focus ::placeholder {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-nav #middlenav ::-webkit-input-placeholder {
-  -webkit-transform: translateX(48%);
-          transform: translateX(48%);
-}
-
-nav #middlenav :-ms-input-placeholder {
-  transform: translateX(48%);
-}
-
-nav #middlenav ::-ms-input-placeholder {
-  transform: translateX(48%);
-}
-
-nav #middlenav ::placeholder {
-  -webkit-transform: translateX(48%);
-          transform: translateX(48%);
-}
-
-nav #rightnav {
+nav #middlenav #rightnav {
   width: 10vw;
 }
 /*# sourceMappingURL=nav.css.map */
