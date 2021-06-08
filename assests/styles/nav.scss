@@ -9,8 +9,13 @@ border: 0;
 
 
 nav{
+position: relative;
+top: 2.5vh;
 
-display: flex;
+
+display: grid;
+grid-template-rows: 2vh auto;
+grid-template-columns: auto auto auto;
 width: 100vw;
 height: 8vh;
 align-items: center;
@@ -23,23 +28,23 @@ color:blue;
 }
 
 #leftnav{
-
+grid-row: 1/2;
 width: 15vw;
+grid-column:1/2 ;
 
 }
 
 
 
 #middlenav{
-display: flex;
-flex-direction: column;
-
-place-content: center;
+grid-column:2/3 ;
+grid-row: 1/2;
 
 width: 55vw;
 
 form{
 width: 100%;
+
 text-align: center;
 input{
 margin:auto;
@@ -54,21 +59,28 @@ border: 5px solid blue;
 }
 
 
-
+}
 
 
 }
 
 
-
-
-
+#searchbar-dropdown-container{
+width: 33vw;
+margin: auto;
+margin-top: 2vh;
+display: none;
+border: 5px solid red;
+height: 50px;
+grid-column: 2/3;
+grid-row: 2/3;
+}
 
 
 #searchbar-dropdown{
 width:33vw;
-margin:auto;
-display: none;
+
+display: block;
 
 border:1px solid orange;
 
@@ -78,27 +90,9 @@ border:1px solid orange;
 
 
 
-
-}
-
-
-
-
-#nav-searchbar:focus #searchbar-dropdown{
-
-display: block;
-}
-
-
-
-
-
-
-
-
-
 #rightnav{
-
+grid-column:3/4 ;
+grid-row: 1/2;
 width: 15vw;
 
 }

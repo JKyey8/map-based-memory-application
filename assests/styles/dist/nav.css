@@ -6,7 +6,11 @@
 }
 
 nav {
-  display: flex;
+  position: relative;
+  top: 2.5vh;
+  display: grid;
+  grid-template-rows: 2vh auto;
+  grid-template-columns: auto auto auto;
   width: 100vw;
   height: 8vh;
   align-items: center;
@@ -16,12 +20,13 @@ nav a {
   color: blue;
 }
 nav #leftnav {
+  grid-row: 1/2;
   width: 15vw;
+  grid-column: 1/2;
 }
 nav #middlenav {
-  display: flex;
-  flex-direction: column;
-  place-content: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
   width: 55vw;
 }
 nav #middlenav form {
@@ -39,15 +44,23 @@ nav #middlenav form :focus {
   outline: none;
   border: 5px solid blue;
 }
-nav #middlenav #searchbar-dropdown {
+nav #searchbar-dropdown-container {
   width: 33vw;
   margin: auto;
+  margin-top: 2vh;
   display: none;
+  border: 5px solid red;
+  height: 50px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+nav #searchbar-dropdown {
+  width: 33vw;
+  display: block;
   border: 1px solid orange;
 }
-nav #nav-searchbar:focus #searchbar-dropdown {
-  display: block;
-}
 nav #rightnav {
+  grid-column: 3/4;
+  grid-row: 1/2;
   width: 15vw;
 }
