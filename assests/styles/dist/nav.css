@@ -20,14 +20,16 @@ nav #leftnav {
 }
 nav #middlenav {
   display: flex;
-  text-align: center;
+  flex-direction: column;
   place-content: center;
   width: 55vw;
 }
 nav #middlenav form {
   width: 100%;
+  text-align: center;
 }
 nav #middlenav form input {
+  margin: auto;
   border: 2px solid black;
   border-radius: 5px;
   width: 60%;
@@ -35,7 +37,17 @@ nav #middlenav form input {
 }
 nav #middlenav form :focus {
   outline: none;
+  border: 5px solid blue;
 }
-nav #middlenav #rightnav {
+nav #middlenav #searchbar-dropdown {
+  width: 33vw;
+  margin: auto;
+  display: none;
+  border: 1px solid orange;
+}
+nav #nav-searchbar:focus #searchbar-dropdown {
+  display: block;
+}
+nav #rightnav {
   width: 15vw;
 }

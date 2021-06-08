@@ -28,17 +28,21 @@ width: 15vw;
 
 }
 
+
+
 #middlenav{
 display: flex;
-text-align: center;
+flex-direction: column;
+
 place-content: center;
 
 width: 55vw;
 
 form{
 width: 100%;
+text-align: center;
 input{
-
+margin:auto;
 border: 2px solid black;
 border-radius: 5px;
 width:60%;
@@ -46,12 +50,51 @@ height: 3vh;
 
 }:focus{
 outline: none;
+border: 5px solid blue;
+}
+
+
+
 
 
 }
 
 
+
+
+
+
+
+#searchbar-dropdown{
+width:33vw;
+margin:auto;
+display: none;
+
+border:1px solid orange;
+
+
+
 }
+
+
+
+
+}
+
+
+
+
+#nav-searchbar:focus #searchbar-dropdown{
+
+display: block;
+}
+
+
+
+
+
+
+
 
 
 #rightnav{
@@ -61,5 +104,7 @@ width: 15vw;
 }
 
 
+
 }
-}
+
+

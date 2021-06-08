@@ -4,23 +4,36 @@
 
 
 <link rel="stylesheet" type="text/css" href="/assests/styles/dist/nav.css">
+<script  defer src="/assests/scripts/dist/nav.js"></script>
 </head>
 <body>
     
 <header>
 <nav>
 <div id="left nav">
-<p>left</p>
+<p id="weirdAl">left</p>
 </div>
 
 
 
 <div id="middlenav">
 
-<form id="nav-locationsearch" autocomplete="off">
-<input type="search" id="nav-searchbar" autocomplete="false" value="" type="text" placeholder="Search(general locations we've been, dates, etc)" >
+<form autocomplete="off" id="nav-locationsearch" >
+<input type="text" list="navbar-places-list" id="nav-searchbar" autocomplete="off"  placeholder="Search(general locations we've been, dates, etc)" >
+
+
+
 
 </form>
+
+<div id="searchbar-dropdown"><p>hello</p></div>
+<!--
+<datalist id="navbar-places-list">
+<option value="movies"></option>
+<option value="park"></option>
+
+</datalist>
+-->
 
 
 
@@ -28,7 +41,7 @@
 </div>
 
 <div id=" rightnav">
-<a href="/">home</a>
+<a href="/" id="byebye">home</a>
 <a href="/profile/hi">hello</a>
 
 </div>

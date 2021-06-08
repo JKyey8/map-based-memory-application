@@ -31,16 +31,21 @@ nav #middlenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   place-content: center;
   width: 55vw;
 }
 
 nav #middlenav form {
   width: 100%;
+  text-align: center;
 }
 
 nav #middlenav form input {
+  margin: auto;
   border: 2px solid black;
   border-radius: 5px;
   width: 60%;
@@ -49,9 +54,26 @@ nav #middlenav form input {
 
 nav #middlenav form :focus {
   outline: none;
+  border: 5px solid blue;
 }
 
-nav #middlenav #rightnav {
+nav #middlenav form :focus ~ #searchbar-dropdown {
+  background-color: blue;
+  display: block;
+}
+
+nav #middlenav #searchbar-dropdown {
+  width: 33vw;
+  margin: auto;
+  display: none;
+  border: 1px solid orange;
+}
+
+nav #nav-searchbar:focus #searchbar-dropdown {
+  display: block;
+}
+
+nav #rightnav {
   width: 15vw;
 }
 /*# sourceMappingURL=nav.css.map */
