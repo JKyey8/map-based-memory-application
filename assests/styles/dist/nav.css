@@ -5,7 +5,7 @@
   border: 0;
 }
 
-nav {
+header nav {
   position: relative;
   top: 2.5vh;
   display: grid;
@@ -16,35 +16,34 @@ nav {
   align-items: center;
   justify-content: space-around;
 }
-nav a {
+header nav a {
   color: blue;
 }
-nav #leftnav {
+header nav #leftnav {
   grid-row: 1/2;
   width: 15vw;
   grid-column: 1/2;
 }
-nav #middlenav {
+header nav #middlenav {
   grid-column: 2/3;
   grid-row: 1/2;
   width: 55vw;
 }
-nav #middlenav form {
+header nav #middlenav form {
   width: 100%;
   text-align: center;
 }
-nav #middlenav form input {
+header nav #middlenav form input {
   margin: auto;
   border: 2px solid black;
   border-radius: 5px;
   width: 60%;
   height: 3vh;
 }
-nav #middlenav form :focus {
+header nav #middlenav form :focus {
   outline: none;
-  border: 5px solid blue;
 }
-nav #searchbar-dropdown-container {
+header nav #searchbar-dropdown-container {
   width: 33vw;
   margin: auto;
   margin-top: 2vh;
@@ -54,13 +53,26 @@ nav #searchbar-dropdown-container {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-nav #searchbar-dropdown {
-  width: 33vw;
+header nav #searchbar-dropdown {
+  width: 100%;
   display: block;
   border: 1px solid orange;
 }
-nav #rightnav {
+header nav #searchbar-dropdown h3 {
+  display: block;
+}
+header nav #rightnav {
   grid-column: 3/4;
   grid-row: 1/2;
   width: 15vw;
+}
+header nav #rightnav-link-container a {
+  text-decoration: none;
+  border: 0.25rem solid blue;
+  border-radius: 1rem;
+  padding: 0.42rem;
+}
+
+.nav-searchable-locations {
+  display: block;
 }

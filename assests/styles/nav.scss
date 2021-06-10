@@ -8,7 +8,11 @@ border: 0;
 }
 
 
+
+header{
+
 nav{
+
 position: relative;
 top: 2.5vh;
 
@@ -55,7 +59,7 @@ height: 3vh;
 
 }:focus{
 outline: none;
-border: 5px solid blue;
+
 }
 
 
@@ -78,15 +82,20 @@ grid-row: 2/3;
 
 
 #searchbar-dropdown{
-width:33vw;
+width:100%;
 
 display: block;
 
 border:1px solid orange;
 
+h3{
 
+
+display:block;
+}
 
 }
+
 
 
 
@@ -97,8 +106,25 @@ width: 15vw;
 
 }
 
+#rightnav-link-container{
 
+
+a{
+
+text-decoration: none;
+border:.25rem solid blue;
+border-radius: 1rem;
+padding: .42rem;
+}
+}
+
+}
 
 }
 
 
+.nav-searchable-locations{
+
+display: block;
+
+}

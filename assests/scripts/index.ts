@@ -1,3 +1,7 @@
+//functions to run automatically
+
+//searchLocations()
+
 //defined variables
 
 
@@ -8,6 +12,7 @@ const library = [-118.8547961,34.2011644 ]
 const parkbyTOHS = [-118.8724048,34.2132129 ]
 const NPHS = [-118.9544604,34.1844188 ]
 const snapchatHQ = [-118.4532558, 34.0164097]
+const stripperpole =  [-118.87072630976799, 34.21461781064242]
 const mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 const mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
 
@@ -21,12 +26,12 @@ const NPHSDescription = "hello"
 
 
 //can change
-var centerMap = movies
-var mapStyle = mapstyleSteet
+var centerMap = movies;
+var mapStyle = mapstyleSteet;
+var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", ];
 
 
-
-
+displayLocation()
 
 /*
 var mapboxgl;
@@ -197,3 +202,87 @@ essential: true
 
 
 })
+
+//gettig info from searcbar
+
+
+document.getElementById("nav-searchbar").addEventListener("keyup", function(){
+
+
+document.getElementById("searchbar-dropdown-container").style.display = "block"
+
+
+
+
+
+})
+
+document.getElementById("nav-searchbar").addEventListener("focusout", function(){
+
+//document.getElementById("searchbar-dropdown-container").style.display = "none"
+
+
+})
+
+
+
+
+
+document.getElementById("nav-searchbar").addEventListener("keyup", () => {
+
+//disaplyLocations()
+
+
+//@ts-ignore
+let searchquery = document.querySelector("#nav-searchbar").value;
+let highersearchquery = searchquery.toUpperCase();
+let lowersearchquery = searchquery.toLowerCase();
+
+
+
+
+datePlaces.forEach((location) => {
+if(location.includes(searchquery) == true || location.includes(lowersearchquery) == true  || location.includes(highersearchquery) == true){
+
+document.getElementById("location-" + location).style.display = "block"
+
+} else {
+document.getElementById("location-" + location).style.display = "none"
+} 
+
+})
+
+
+if(searchquery == ""){
+
+document.getElementById("searchbar-dropdown-container").style.display = "none"
+
+}
+
+
+
+})
+
+async function displayLocation(){
+
+//@ts-ignore
+var searchquery = document.querySelector("#nav-searchbar").value;
+
+
+await datePlaces.forEach((location) => {
+ let searchDropdown = document.getElementById("searchbar-dropdown")
+let searchablelocation= document.createElement("h3")
+searchablelocation.id = "location-" + location
+searchablelocation.className = "nav-searchable-locations"
+searchablelocation.innerHTML = location
+
+
+searchDropdown.appendChild(searchablelocation)
+
+
+
+
+})
+
+
+}
