@@ -35,7 +35,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-//searchLocations()
 //defined variables
 var movies = [-118.8852489, 34.182057];
 var Hendrixpark = [-118.88335, 34.1932084];
@@ -43,7 +42,6 @@ var library = [-118.8547961, 34.2011644];
 var parkbyTOHS = [-118.8724048, 34.2132129];
 var NPHS = [-118.9544604, 34.1844188];
 var snapchatHQ = [-118.4532558, 34.0164097];
-var stripperpole = [-118.87072630976799, 34.21461781064242];
 var mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 var mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
 var moviesDescription = "hello";
@@ -66,6 +64,7 @@ style: mapStyle, // style URL
 center: centerMap, // starting position [lng, lat]
 zoom: 17 // starting zoom
 });
+
 
 
 */
@@ -214,3 +213,4 @@ function displayLocation() {
         });
     });
 }
+var stripperpole = [-118.87072630976799, 34.21461781064242];

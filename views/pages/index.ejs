@@ -13,22 +13,42 @@
 <script  src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
+  <link rel="apple-touch-icon" href="/images/apple-touch.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#764ABC"/>
 
-
+<link rel="manifest" href="manifest.json">
 
 </head>
 <body>
 <%- include("../partials/nav"); %>
 
 
+<script> 
+if('serviceWorker' in navigator)
+navigator.serviceWorker.register('/service-worker.js')
+</script>
+
+
+
+
+
+
+
 <!-- Load the `mapbox-gl-geocoder` plugin. -->
+
+<!--
+
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
  
-<!-- Promise polyfill script is required -->
-<!-- to use Mapbox GL Geocoder in IE 11. -->
+
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+
+ -->
+
  
 
 

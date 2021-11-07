@@ -1,6 +1,5 @@
 //functions to run automatically
 
-//searchLocations()
 
 //defined variables
 
@@ -12,7 +11,7 @@ const library = [-118.8547961,34.2011644 ]
 const parkbyTOHS = [-118.8724048,34.2132129 ]
 const NPHS = [-118.9544604,34.1844188 ]
 const snapchatHQ = [-118.4532558, 34.0164097]
-const stripperpole =  [-118.87072630976799, 34.21461781064242]
+
 const mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 const mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
 
@@ -46,8 +45,8 @@ zoom: 17 // starting zoom
 });
 
 
-*/
 
+*/
 
 /*
 // Add the control to the map.
@@ -286,3 +285,10 @@ searchDropdown.appendChild(searchablelocation)
 
 
 }
+
+const stripperpole =  [-118.87072630976799, 34.21461781064242]
+
+
+
+
+
