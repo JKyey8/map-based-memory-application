@@ -1,3 +1,5 @@
+
+
 const staticCacheName = "site-static";
 const assets = [
 
@@ -15,7 +17,7 @@ const assets = [
 "/icons/apple-splash-1242-2208.jpg",
 "icons/manifest-icon-192.maskable.png",
 "icons/manifest-icon-512.maskable.png",
-
+"/assests/scripts/dist/sw.js"
 
  ];
 
