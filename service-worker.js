@@ -22,6 +22,7 @@ const assets = [
  ];
 
 
+
 // install service worker
 
 self.addEventListener("install", (evt) => {
