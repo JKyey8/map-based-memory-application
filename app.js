@@ -37,16 +37,20 @@ app.get("/", function(req,res) {
 
 res.render("index") 
 
-})
+});
 
 app.get("/profile/:userid", function(req,res){
 
 
 res.render("profile")
-})
+});
 
 
+app.get("/pictures", function(req,res){
 
+res.render("pictures")
+
+});
 
 
 app.listen(PORT)

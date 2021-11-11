@@ -29,6 +29,9 @@ app.get("/", function (req, res) {
 app.get("/profile/:userid", function (req, res) {
   res.render("profile");
 });
+app.get("/pictures", function (req, res) {
+  res.render("pictures");
+});
 app.listen(PORT);
 console.log("listening on http://127.0.0.1:" + PORT + "/"); //get app to reload when chanes are made(look at package.json)
 

@@ -1,6 +1,7 @@
 
 
-const staticCacheName = "site-static";
+const staticCacheName = "site-static-v1";
+const dynamicCache = "site-dynamic-v1"
 const assets = [
 
 '/',
@@ -42,7 +43,15 @@ cache.addAll(assets)
 
 self.addEventListener("activate", (evt) => {
 console.log('service worker has ben activated')
+evt.waitUntil(
+caches.keys().then((keys) => {
 
+return Promise.all(keys
+.filter(key => key !== staticCacheName)
+.map(key => caches.delete(key))
+)
+})
+);
 });
 
 
@@ -51,13 +60,21 @@ self.addEventListener('fetch', (evt) => {
 evt.respondWith(
 caches.match(evt.request).then(cahceRes => {
 
-return cahceRes || fetch(evt.request);
+return cahceRes || fetch(evt.request).then(fetchRes => {
+    return caches.open(dynamicCache).then(cache => {
+    cache.put(evt.request.url, fetchRes.clone());
+return fetchRes;
+
+
+})
+
+});
 
 
 })
 
 
-)
+);
 
 });
 
