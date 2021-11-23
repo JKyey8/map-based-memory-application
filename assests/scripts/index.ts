@@ -32,7 +32,7 @@ var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "lib
 
 displayLocation()
 
-/*
+
 var mapboxgl;
 
 var MapboxGeocoder;
@@ -46,9 +46,9 @@ zoom: 17 // starting zoom
 
 
 
-*/
 
-/*
+
+
 // Add the control to the map.
 map.addControl(
 new MapboxGeocoder({
@@ -57,16 +57,16 @@ mapboxgl: mapboxgl
 })
 );
 
-*/
+
 // to make a marker
 
-/*
+
 var marker = new mapboxgl.Marker() // initialize a new marker
   .setLngLat([]) // Marker [lng, lat] coordinates
   .addTo(map); // Add the marker to the map
 
 
-*/
+
 
 
 
