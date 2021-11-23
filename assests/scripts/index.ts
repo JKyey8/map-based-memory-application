@@ -205,6 +205,9 @@ essential: true
 //gettig info from searcbar
 
 
+
+
+
 document.getElementById("nav-searchbar").addEventListener("keyup", function(){
 
 
@@ -291,4 +294,20 @@ const stripperpole =  [-118.87072630976799, 34.21461781064242]
 
 
 
+
+//search bar
+
+document.getElementById("wonky").addEventListener("click", function(){
+
+document.getElementById("search-results-container").style.display = "block"
+
+
+})
+
+document.getElementById("close-search").addEventListener("click", function(){
+
+document.getElementById("search-results-container").style.display = "none"
+
+
+})
 
