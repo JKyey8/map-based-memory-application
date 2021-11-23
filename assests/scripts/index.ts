@@ -204,10 +204,6 @@ essential: true
 
 //gettig info from searcbar
 
-
-
-
-
 document.getElementById("nav-searchbar").addEventListener("keyup", function(){
 
 

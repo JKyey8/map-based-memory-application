@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff"/>
     <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
-    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <!-- Manifest stuff-->
 <link rel="manifest" href="manifest.json">
 
@@ -55,7 +55,7 @@
 
 </head>
 <body>
-
+<div id="mainwrapper">
 <header>
 <nav>
 <div id="left nav">
@@ -68,13 +68,6 @@
 <button id="wonky">hey there</button>
 
 
-<form autocomplete="off" id="nav-locationsearch" >
-<input type="text" list="navbar-places-list" id="nav-searchbar" autocomplete="off"  placeholder="Search(general locations we've been, dates, etc)" value="" >
-
-
-
-
-</form>
 
 
 
@@ -82,9 +75,7 @@
 
 
 </div>
-<div id="searchbar-dropdown-container">
-<div id="searchbar-dropdown"></div>
-</div>
+
 <div id="rightnav">
 <div id="rightnav-link-container">
 <a href="/">home</a>
@@ -116,6 +107,10 @@
 <input type="text" list="navbar-places-list" id="nav-searchbar" autocomplete="off"  placeholder="Search(general locations we've been, dates, etc)" value="" >
 
 
+
+<div id="searchbar-dropdown-container">
+<div id="searchbar-dropdown"></div>
+</div>
 </div>
 
 
@@ -160,7 +155,8 @@
 
 
 
-
+</div>
 <script src="/reload/reload.js"></script>
+
 </body>
 </html>
