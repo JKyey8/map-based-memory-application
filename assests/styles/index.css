@@ -23,6 +23,7 @@
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  position: fixed;
 }
 
 body {
