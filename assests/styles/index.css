@@ -121,4 +121,22 @@ body {
 #searchbar-dropdown h3 {
   display: block;
 }
+
+.marker {
+  background-image: url("/assests/images/map-marker.png");
+  background-position: center;
+  width: 10%;
+  height: 8%;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 /*# sourceMappingURL=index.css.map */

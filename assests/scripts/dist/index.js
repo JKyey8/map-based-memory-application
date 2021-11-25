@@ -25,6 +25,48 @@ var map = new mapboxgl.Map({
     center: centerMap,
     zoom: 17 // starting zoom
 });
+//markers on the map
+var geojson = {
+    type: 'FeatureCollection',
+    features: [
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-118.8856167, 34.182057]
+            },
+            properties: {
+                title: 'AMC Theater',
+                description: 'movies'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-118.88335, 34.1932084]
+            },
+            properties: {
+                title: 'Hendrix Park',
+                description: 'Most visited Park'
+            }
+        }
+    ]
+};
+// add markers to map
+for (var _i = 0, _a = geojson.features; _i < _a.length; _i++) {
+    var feature = _a[_i];
+    // create a HTML element for each feature
+    var el = document.createElement('div');
+    el.className = 'marker';
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates);
+    new mapboxgl.Marker(el)
+        .setLngLat(feature.geometry.coordinates)
+        .setPopup(new mapboxgl.Popup({ offset: 0 }) // add popups
+        .setHTML("<h3>" + feature.properties.title + "</h3><p>" + feature.properties.description + "</p>"))
+        .addTo(map);
+}
 // Add the control to the map.
 map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
