@@ -1,7 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+}
+
 #mobile-nav {
-  -webkit-box-flex: 4%;
-      -ms-flex: 4%;
-          flex: 4%;
+  -webkit-box-flex: 6%;
+      -ms-flex: 6%;
+          flex: 6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,11 +22,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 #mobile-nav a {
   -webkit-box-flex: 20%;
       -ms-flex: 20%;
           flex: 20%;
+  text-align: center;
 }
 /*# sourceMappingURL=bottom-nav.css.map */

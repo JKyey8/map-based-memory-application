@@ -8,11 +8,12 @@ const assets = [
 "/assests/styles/dist/navbar-responsive.css",
 "/assests/styles/dist/top-nav.css",
 "/assests/scripts/dist/index.js",
+"/assests/scripts/dist/searchbar.js",
+"/assests/styles/dist/searchbar.css",
 
 
 
 "/views/pages/index.ejs", 
-
 "/views/pages/pictures.ejs",
 "/views/partials/bottom-nav.ejs",
 "/views/partials/top-nav.ejs",  

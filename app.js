@@ -40,10 +40,10 @@ res.render("index")
 
 });
 
-app.get("/profile/:userid", function(req,res){
+app.get("/jokes", function(req,res){
 
 
-res.render("profile")
+res.render("inside-jokes")
 });
 
 

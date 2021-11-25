@@ -19,6 +19,7 @@ html {
   flex-direction: column;
   flex-wrap: nowrap;
   position: fixed;
+  overflow: hidden;
 }
 
 body {
@@ -32,24 +33,7 @@ body {
 
 #map-container {
   width: 100%;
-  flex: 65%;
-  border: 5px solid red;
-}
-#map-container #mapview-buttons {
-  position: relative;
-  bottom: 2vh;
-  left: 2vw;
-  width: 10vw;
-}
-#map-container #mapview-buttons button {
-  border: 2px solid blue;
-  background-color: #add8e6;
-  padding: 0.5rem;
-  border-right-color: black;
-  border-radius: 1rem 0rem 0rem 1rem;
-}
-#map-container #mapview-buttons :last-child {
-  border-radius: 0rem 1rem 1rem 0rem;
+  flex: 70%;
 }
 #map-container #map {
   width: 100%;
@@ -58,7 +42,6 @@ body {
 
 #map-description-container {
   width: 100%;
-  border: 5px solid red;
   flex: 20%;
 }
 
@@ -72,7 +55,7 @@ body {
   top: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: none;
   z-index: 500;
 }
@@ -92,7 +75,7 @@ body {
 }
 
 #searchbar-dropdown-container {
-  width: 33vw;
+  width: 55%;
   margin: auto;
   margin-top: 2vh;
   display: none;

@@ -30,9 +30,9 @@ var mapStyle = mapstyleSteet;
 var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", ];
 
 
-displayLocation()
 
-/*
+
+
 var mapboxgl;
 
 var MapboxGeocoder;
@@ -66,79 +66,16 @@ var marker = new mapboxgl.Marker() // initialize a new marker
   .addTo(map); // Add the marker to the map
 
 
-*/
 
 
 
-//changemapview
-document.getElementById("map-street-button").addEventListener("click", function(){
-map.setStyle(mapstyleSteet)
-
-})
-document.getElementById("map-satilite-button").addEventListener("click", function(){
-map.setStyle(mapstyleSatilite)
-
-})
 
 
 
 //map scrolling to different locations
 var isAtStart = true
 
-document.getElementById("movies").addEventListener("click", function(e){
 
-
-var target = isAtStart ? movies: centerMap
-
-isAtStart = !isAtStart;
-
-map.flyTo({
-center:target,
-zoom: 17,
-speed:0.8,
-bearing: 0, 
-curve: 1,
-
-easing: function (t) {
-return t;
-},
- 
-// this animation is considered essential with respect to prefers-reduced-motion
-essential: true
-
-})
-
-
-
-})
-
-
-document.getElementById("park").addEventListener("click", function(){
-
-
-var target = isAtStart ? parkbyTOHS: centerMap
-
-isAtStart = !isAtStart;
-
-map.flyTo({
-center:target,
-zoom: 17,
-speed:0.8,
-bearing: 0, 
-curve: 1,
-
-easing: function (t) {
-return t;
-},
- 
-// this animation is considered essential with respect to prefers-reduced-motion
-essential: true
-
-})
-
-
-
-})
 
 
 let searchinput = null;
@@ -202,88 +139,8 @@ essential: true
 
 })
 
-//gettig info from searcbar
-
-document.getElementById("nav-searchbar").addEventListener("keyup", function(){
 
 
-document.getElementById("searchbar-dropdown-container").style.display = "block"
-
-
-
-
-
-})
-
-document.getElementById("nav-searchbar").addEventListener("focusout", function(){
-
-//document.getElementById("searchbar-dropdown-container").style.display = "none"
-
-
-})
-
-
-
-
-
-document.getElementById("nav-searchbar").addEventListener("keyup", () => {
-
-//disaplyLocations()
-
-
-//@ts-ignore
-let searchquery = document.querySelector("#nav-searchbar").value;
-let highersearchquery = searchquery.toUpperCase();
-let lowersearchquery = searchquery.toLowerCase();
-
-
-
-
-datePlaces.forEach((location) => {
-if(location.includes(searchquery) == true || location.includes(lowersearchquery) == true  || location.includes(highersearchquery) == true){
-
-document.getElementById("location-" + location).style.display = "block"
-
-} else {
-document.getElementById("location-" + location).style.display = "none"
-} 
-
-})
-
-
-if(searchquery == ""){
-
-document.getElementById("searchbar-dropdown-container").style.display = "none"
-
-}
-
-
-
-})
-
-async function displayLocation(){
-
-//@ts-ignore
-var searchquery = document.querySelector("#nav-searchbar").value;
-
-
-await datePlaces.forEach((location) => {
- let searchDropdown = document.getElementById("searchbar-dropdown")
-let searchablelocation= document.createElement("h3")
-searchablelocation.id = "location-" + location
-searchablelocation.className = "nav-searchable-locations"
-searchablelocation.innerHTML = location
-
-
-searchDropdown.appendChild(searchablelocation)
-
-
-
-
-})
-
-
-}
 
 const stripperpole =  [-118.87072630976799, 34.21461781064242]
 
@@ -291,29 +148,5 @@ const stripperpole =  [-118.87072630976799, 34.21461781064242]
 
 
 
-//search bar
-
-document.getElementById("wonky").addEventListener("click", function(){
-
-document.getElementById("search-results-container").style.display = "block"
 
 
-})
-
-document.getElementById("close-search").addEventListener("click", function(){
-
-document.getElementById("search-results-container").style.display = "none"
-
-
-})
-
-
-window.addEventListener("touchstart", touchHandler, false);
-
-function touchHandler(event){
-    if(event.touches.length > 1){
-        //the event is multi-touch
-        //you can then prevent the behavior
-        event.preventDefault()
-    }
-}

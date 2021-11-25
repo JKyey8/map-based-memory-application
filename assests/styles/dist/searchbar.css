@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+#searchbar-container button {
+  position: absolute;
+  top: 5%;
+  border: 5px solid red;
+  border-radius: 20%;
+  z-index: 5;
+}
