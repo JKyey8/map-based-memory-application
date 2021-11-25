@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hola</title>
 <!--my script ands style tags-->
+<link rel="stylesheet" href="/assests/styles/dist/navbar-responsive.css">
 <link rel="stylesheet" type="text/css" href="/assests/styles/dist/index.css">
 <link rel="stylesheet" type="text/css" href="/assests/styles/dist/nav.css">
 <script defer src="/assests/scripts/dist/index.js"></script>
@@ -56,48 +57,7 @@
 </head>
 <body>
 <div id="mainwrapper">
-<header>
-<nav>
-<div id="left nav">
-<p id="weirdAl">left side</p>
-</div>
-
-
-
-<div id="middlenav">
-<button id="wonky">hey there</button>
-
-
-
-
-
-
-
-
-</div>
-
-<div id="rightnav">
-<div id="rightnav-link-container">
-<a href="/">home</a>
-<a href="/profile">hello</a>
-<a href="/create">Create Map</a>
-<a href="/pictures">pictures</a>
-</div>
-</div>
-
-
-
-
-<div id="nav-mobile">
-<button id="nav-mobile-button"></button>
-
-
-
-</div>
-
-
-</nav>
-</header>
+<%- include("../partials/top-nav"); %>
 
 
 <div id="search-results-container">
@@ -155,6 +115,11 @@
 
 
 
+
+<%- include("../partials/bottom-nav"); %>
+
+
+ </div>
 </div>
 <script src="/reload/reload.js"></script>
 

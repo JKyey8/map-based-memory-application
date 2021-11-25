@@ -53,24 +53,41 @@ var centerMap = movies;
 var mapStyle = mapstyleSteet;
 var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",];
 displayLocation();
+/*
 var mapboxgl;
+
 var MapboxGeocoder;
-mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3A1cTJmdzMwOTAxMnVzYmQ4OHlmb3JwIn0.VC5-U832snyQzljaNYdDrQ';
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
 var map = new mapboxgl.Map({
-    container: "map",
-    style: mapStyle,
-    center: centerMap,
-    zoom: 17 // starting zoom
+container: "map", // container id
+style: mapStyle, // style URL
+center: centerMap, // starting position [lng, lat]
+zoom: 17 // starting zoom
 });
+
+
+
+
+
+
 // Add the control to the map.
-map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-}));
+map.addControl(
+new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+mapboxgl: mapboxgl
+})
+);
+
+
 // to make a marker
+
+
 var marker = new mapboxgl.Marker() // initialize a new marker
-    .setLngLat([]) // Marker [lng, lat] coordinates
-    .addTo(map); // Add the marker to the map
+  .setLngLat([]) // Marker [lng, lat] coordinates
+  .addTo(map); // Add the marker to the map
+
+
+*/
 //changemapview
 document.getElementById("map-street-button").addEventListener("click", function () {
     map.setStyle(mapstyleSteet);

@@ -3,14 +3,21 @@ const dynamicCacheName = 'site-dynamic-v1';
 const assets = [
 
 '/',
-"/assests/styles/index.css", 
-
- "/views/pages/index.ejs", 
-
-
-"/assests/scripts/dist/index.js",
-"/manifest.json",
 "/assests/styles/dist/index.css",
+"/assests/styles/dist/bottom-nav.css",
+"/assests/styles/dist/navbar-responsive.css",
+"/assests/styles/dist/top-nav.css",
+"/assests/scripts/dist/index.js",
+
+
+
+"/views/pages/index.ejs", 
+
+"/views/pages/pictures.ejs",
+"/views/partials/bottom-nav.ejs",
+"/views/partials/top-nav.ejs",  
+
+"/manifest.json",
 
 "/icons/apple-icon-180.png",
 "/icons/apple-splash-1242-2208.jpg",

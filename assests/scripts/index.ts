@@ -32,11 +32,11 @@ var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "lib
 
 displayLocation()
 
-
+/*
 var mapboxgl;
 
 var MapboxGeocoder;
-	mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3A1cTJmdzMwOTAxMnVzYmQ4OHlmb3JwIn0.VC5-U832snyQzljaNYdDrQ';
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
 var map = new mapboxgl.Map({
 container: "map", // container id
 style: mapStyle, // style URL
@@ -66,7 +66,7 @@ var marker = new mapboxgl.Marker() // initialize a new marker
   .addTo(map); // Add the marker to the map
 
 
-
+*/
 
 
 

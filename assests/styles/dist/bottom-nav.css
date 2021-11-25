@@ -1,0 +1,10 @@
+#mobile-nav {
+  flex: 4%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#mobile-nav a {
+  flex: 20%;
+}

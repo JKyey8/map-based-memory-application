@@ -1,0 +1,93 @@
+header{
+flex: 8%;
+nav{
+
+position: relative;
+top: 2.5vh;
+
+
+display: flex;
+
+width: 100%;
+height: 8vh;
+
+justify-content: space-between;
+
+a{
+
+color:blue;
+
+}
+
+#leftnav{
+
+flex: 1;
+
+}
+
+
+
+#middlenav{
+flex: 5;
+
+button{
+border: 2px solid blue;
+background-color: #add8e6;
+padding: .5rem;
+border-right-color:black ;
+border-radius: 1rem 0rem 0rem 1rem;
+
+
+}
+
+
+form{
+width: 100%;
+
+text-align: center;
+input{
+margin:auto;
+border: 2px solid black;
+border-radius: 5px;
+width:60%;
+height: 3vh;
+
+}:focus{
+outline: none;
+
+}
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+#rightnav{
+flex: 3;
+
+
+}
+
+#rightnav-link-container{
+
+
+a{
+
+text-decoration: none;
+border:.25rem solid blue;
+border-radius: 1rem;
+padding: .42rem;
+width: 5vw;
+}
+}
+
+}
+
+}

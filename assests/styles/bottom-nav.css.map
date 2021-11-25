@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EAEX,IAAI,EAAE,EAAE;EACR,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,MAAM;CAQlB;;AAdD,AAQA,WARW,CAQX,CAAC,CAAA;EACD,IAAI,EAAE,GAAG;CAIR",
+    "sources": [
+        "bottom-nav.scss"
+    ],
+    "names": [],
+    "file": "bottom-nav.css"
+}
