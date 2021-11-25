@@ -307,3 +307,13 @@ document.getElementById("search-results-container").style.display = "none"
 
 })
 
+
+window.addEventListener("touchstart", touchHandler, false);
+
+function touchHandler(event){
+    if(event.touches.length > 1){
+        //the event is multi-touch
+        //you can then prevent the behavior
+        event.preventDefault()
+    }
+}
