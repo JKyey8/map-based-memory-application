@@ -9,14 +9,16 @@ border: 0;
 
 
 #mobile-nav{
-
+position: relative;
+bottom: 0;
 flex: 6%;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
 align-items: center;
 text-align: center;
-
+padding-bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom, 0);
 a{
 flex: 20%;
 text-align: center;
