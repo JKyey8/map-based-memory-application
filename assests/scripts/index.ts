@@ -48,7 +48,7 @@ var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "lib
 
 
 
-
+/*
 
 var mapboxgl;
 
@@ -61,7 +61,7 @@ center: centerMap, // starting position [lng, lat]
 zoom: 17 // starting zoom
 });
 
-
+*/
 
 
 

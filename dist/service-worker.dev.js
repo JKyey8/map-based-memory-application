@@ -1,8 +1,8 @@
 "use strict";
 
-var staticCacheName = 'site-static-v1';
-var dynamicCacheName = 'site-dynamic-v1';
-var assets = ['/', "/assests/styles/dist/index.css", "/assests/styles/dist/bottom-nav.css", "/assests/styles/dist/navbar-responsive.css", "/assests/styles/dist/top-nav.css", "/assests/scripts/dist/index.js", "/assests/scripts/dist/searchbar.js", "/assests/styles/dist/searchbar.css", "/views/pages/index.ejs", "/views/pages/pictures.ejs", "/views/partials/bottom-nav.ejs", "/views/partials/top-nav.ejs", "/manifest.json", "/icons/apple-icon-180.png", "/icons/apple-splash-1242-2208.jpg", "icons/manifest-icon-192.maskable.png", "icons/manifest-icon-512.maskable.png", "/assests/scripts/dist/sw.js", "/assests/images/map-marker.png"]; // install event
+var staticCacheName = 'site-static-v2';
+var dynamicCacheName = 'site-dynamic-v2';
+var assets = ['/', "/assests/styles/dist/index.css", "/assests/styles/dist/bottom-nav.css", "/assests/styles/dist/navbar-responsive.css", "/assests/styles/dist/top-nav.css", "/assests/scripts/dist/index.js", "/assests/scripts/dist/searchbar.js", "/assests/styles/dist/searchbar.css", "/views/pages/index.ejs", "/views/pages/pictures.ejs", "/views/pages/inside-jokes.ejs", "/views/pages/offline-fallback.ejs", "/views/pages/404,ejs", "/views/partials/bottom-nav.ejs", "/views/partials/top-nav.ejs", "/views/partials/searchbar.ejs", "/manifest.json", "/icons/apple-icon-180.png", "/icons/apple-splash-1242-2208.jpg", "icons/manifest-icon-192.maskable.png", "icons/manifest-icon-512.maskable.png", "/assests/scripts/dist/sw.js", "/assests/images/map-marker.png"]; // install event
 
 self.addEventListener('install', function (evt) {
   //console.log('service worker installed');
