@@ -28,8 +28,8 @@
 
 body {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  height: env(safe-area-inset-top);
+  width: env(safe-area-inset-left);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,6 +40,7 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow-y: hidden;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 #map-container {
