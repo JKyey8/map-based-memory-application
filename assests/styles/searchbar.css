@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 0;
+  overflow: hidden;
 }
 
 #searchbar-container button {
