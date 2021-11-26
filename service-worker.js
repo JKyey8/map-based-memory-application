@@ -10,6 +10,8 @@ const assets = [
 "/assests/scripts/dist/index.js",
 "/assests/scripts/dist/searchbar.js",
 "/assests/styles/dist/searchbar.css",
+"/assests/styles/dist/jokes.css",
+"/assests/styles/dist/pictures.css",
 
 
 
@@ -37,6 +39,17 @@ const assets = [
 
 
 
+// cache size limit function
+const limitCacheSize = (name, size) => {
+  caches.open(name).then(cache => {
+    cache.keys().then(keys => {
+      if(keys.length > size){
+        cache.delete(keys[0]).then(limitCacheSize(name, size));
+      }
+    });
+  });
+};
+
 // install event
 self.addEventListener('install', evt => {
   //console.log('service worker installed');
@@ -55,7 +68,7 @@ self.addEventListener('activate', evt => {
     caches.keys().then(keys => {
       //console.log(keys);
       return Promise.all(keys
-        .filter(key => key !== staticCacheName && key !== dynamicCacheName)
+        .filter(key => key !== staticCacheName && key !== dynamicCacheName || staticCacheName !== dynamicCacheName)
         .map(key => caches.delete(key))
       );
     })
