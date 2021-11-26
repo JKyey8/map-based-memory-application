@@ -16,20 +16,15 @@ var NPHSDescription = "hello";
 var centerMap = movies;
 var mapStyle = mapstyleSteet;
 var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",];
-/*
-
 var mapboxgl;
-
 var MapboxGeocoder;
-    mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
+mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
 var map = new mapboxgl.Map({
-container: "map", // container id
-style: mapStyle, // style URL
-center: centerMap, // starting position [lng, lat]
-zoom: 17 // starting zoom
+    container: "map",
+    style: mapStyle,
+    center: centerMap,
+    zoom: 17 // starting zoom
 });
-
-*/
 //markers on the map
 var geojson = {
     type: 'FeatureCollection',
