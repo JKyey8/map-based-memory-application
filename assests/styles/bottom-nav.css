@@ -4,6 +4,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 #mobile-nav {
