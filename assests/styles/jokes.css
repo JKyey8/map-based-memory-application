@@ -9,7 +9,6 @@
 #mainwrapper {
   width: 100vw;
   height: 100vh;
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-box-flex: 100%;
       -ms-flex: 100%;
@@ -24,6 +23,7 @@
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: fixed;
+  overflow: hidden;
 }
 
 body {
@@ -40,5 +40,11 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow-y: hidden;
+}
+
+#jokes-container {
+  -webkit-box-flex: 90%;
+      -ms-flex: 90%;
+          flex: 90%;
 }
 /*# sourceMappingURL=jokes.css.map */
