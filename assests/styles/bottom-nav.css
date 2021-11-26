@@ -7,8 +7,6 @@
 }
 
 #mobile-nav {
-  position: relative;
-  bottom: 0;
   -webkit-box-flex: 6%;
       -ms-flex: 6%;
           flex: 6%;
