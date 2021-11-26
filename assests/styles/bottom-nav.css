@@ -25,6 +25,8 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  padding-bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 #mobile-nav a {
