@@ -21,7 +21,6 @@
 
 
 
-
 const movies = [-118.8852489, 34.182057]
 const Hendrixpark = [-118.88335 ,34.1932084] 
 const library = [-118.8547961,34.2011644 ]
@@ -51,6 +50,9 @@ var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "lib
 var mapboxgl;
 
 var MapboxGeocoder;
+
+
+
 	mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
 var map = new mapboxgl.Map({
 container: "map", // container id
@@ -58,8 +60,6 @@ style: mapStyle, // style URL
 center: centerMap, // starting position [lng, lat]
 zoom: 17 // starting zoom
 });
-
-
 
 
 

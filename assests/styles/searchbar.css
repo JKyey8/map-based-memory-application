@@ -5,6 +5,7 @@
           box-sizing: border-box;
   border: 0;
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 #searchbar-container button {

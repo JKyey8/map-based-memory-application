@@ -8,8 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>hola</title>
 <!--my script ands style tags-->
+<script defer src="/node_modules/swup/dist/swup.min.js"></script>
+<script defer src="/node_modules/@swup/scripts-plugin/dist/SwupScriptsPlugin.js"></script>
+<script defer src="/assests/scripts/dist/page-transition.js" ></script>
 <link rel="stylesheet" href="/assests/styles/dist/navbar-responsive.css">
-<link rel="stylesheet" type="text/css" href="/assests/styles/dist/index.css">
+<link  defer rel="stylesheet" type="text/css" href="/assests/styles/dist/index.css">
+
+
 
 <script defer src="/assests/scripts/dist/searchbar.js"></script>
 <script defer src="/assests/scripts/dist/index.js"></script>
@@ -66,8 +71,10 @@
 
 
 
-<%- include("../partials/searchbar"); %>
 
+
+<section id="swup" class="transition-fade">
+<%- include("../partials/searchbar"); %>
 
 <div id="search-results-container">
 <p>suggestions</p>
@@ -118,7 +125,7 @@
 
 
 
-
+</section>
 <%- include("../partials/bottom-nav"); %>
 
 
