@@ -1,58 +1,50 @@
 //functions to run automatically
 
 
+
+
+
+
+
+
 //defined variables
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var mapboxgl;
+var MapboxGeocoder;
+const datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", ];
 const movies = [-118.8852489, 34.182057]
 const Hendrixpark = [-118.88335 ,34.1932084] 
 const library = [-118.8547961,34.2011644 ]
 const parkbyTOHS = [-118.8724048,34.2132129 ]
 const NPHS = [-118.9544604,34.1844188 ]
 const snapchatHQ = [-118.4532558, 34.0164097]
-
 const mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 const mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
-
-
 const moviesDescription = "hello"
 const HendrixparkDescription = "hello"
 const libraryDescription = "hello"
 const NPHSDescription = "hello"
-
+const mapDescription = document.getElementById("map-description-container")
 
 
 
 //can change
 var centerMap = movies;
 var mapStyle = mapstyleSteet;
-var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", ];
+const dateLocations = {
+
+
+places:{
+"Hendrix Park":{description:"I like to go here to have fun"},
+"AMC Theater":{description:"we went here on valenitnes day"},
+"school":{},
+}
+
+};
 
 
 
-var mapboxgl;
 
-var MapboxGeocoder;
-
-
-
+//draw map
 	mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
 var map = new mapboxgl.Map({
 container: "map", // container id
@@ -100,10 +92,15 @@ const geojson = {
 for (const feature of geojson.features) {
   // create a HTML element for each feature
   const el = document.createElement('div');
-  el.className = 'marker';
+  el.id = feature.properties.title;
+  el.className = 'marker' 
+ 
+
 
   // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates)
+  var marker = new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates)
+
+
 
 new mapboxgl.Marker(el)
   .setLngLat(feature.geometry.coordinates)
@@ -114,15 +111,40 @@ new mapboxgl.Marker(el)
       )
   )
   .addTo(map)
+
+
 }
 
 
 
 
 
+//add descrition on marker click
+datePlacesnames.forEach((place) => {
+
+document.getElementById(place).addEventListener("click", () => {
+
+var removeabletext = document.getElementById("map-description-text")
+removeabletext.remove();
+
+
+var texttag = document.createElement("p")
+texttag.id = "map-description-text";
+
+
+var node = document.createTextNode(dateLocations.places[place].description)
+
+
+texttag.appendChild(node)
+
+mapDescription.appendChild(texttag)
+
+})
 
 
 
+
+})
 
 
 
@@ -138,10 +160,6 @@ mapboxgl: mapboxgl
 
 // to make a marker
 
-
-var marker = new mapboxgl.Marker() // initialize a new marker
-  .setLngLat([]) // Marker [lng, lat] coordinates
-  .addTo(map); // Add the marker to the map
 
 
 

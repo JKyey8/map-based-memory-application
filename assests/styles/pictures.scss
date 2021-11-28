@@ -29,6 +29,28 @@ flex-direction: column;
 flex-wrap: nowrap;
 overflow-y: hidden;
 }
+
+
+
+
+#swup{
+width: 100%;
+  height: 100%;
+overscroll-behavior: none; 
+flex: 100%;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+position: fixed;
+overflow: hidden;
+
+}
+
+
+
+
+
+
 #pictures-container{
 flex: 90%;
 

@@ -1,5 +1,8 @@
 //functions to run automatically
 //defined variables
+var mapboxgl;
+var MapboxGeocoder;
+var datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",];
 var movies = [-118.8852489, 34.182057];
 var Hendrixpark = [-118.88335, 34.1932084];
 var library = [-118.8547961, 34.2011644];
@@ -12,12 +15,18 @@ var moviesDescription = "hello";
 var HendrixparkDescription = "hello";
 var libraryDescription = "hello";
 var NPHSDescription = "hello";
+var mapDescription = document.getElementById("map-description-container");
 //can change
 var centerMap = movies;
 var mapStyle = mapstyleSteet;
-var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",];
-var mapboxgl;
-var MapboxGeocoder;
+var dateLocations = {
+    places: {
+        "Hendrix Park": { description: "I like to go here to have fun" },
+        "AMC Theater": { description: "we went here on valenitnes day" },
+        "school": {}
+    }
+};
+//draw map
 mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
 var map = new mapboxgl.Map({
     container: "map",
@@ -58,24 +67,34 @@ for (var _i = 0, _a = geojson.features; _i < _a.length; _i++) {
     var feature = _a[_i];
     // create a HTML element for each feature
     var el = document.createElement('div');
+    el.id = feature.properties.title;
     el.className = 'marker';
     // make a marker for each feature and add to the map
-    new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates);
+    var marker = new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates);
     new mapboxgl.Marker(el)
         .setLngLat(feature.geometry.coordinates)
         .setPopup(new mapboxgl.Popup({ offset: 0 }) // add popups
         .setHTML("<h3>" + feature.properties.title + "</h3><p>" + feature.properties.description + "</p>"))
         .addTo(map);
 }
+//add descrition on marker click
+datePlacesnames.forEach(function (place) {
+    document.getElementById(place).addEventListener("click", function () {
+        var removeabletext = document.getElementById("map-description-text");
+        removeabletext.remove();
+        var texttag = document.createElement("p");
+        texttag.id = "map-description-text";
+        var node = document.createTextNode(dateLocations.places[place].description);
+        texttag.appendChild(node);
+        mapDescription.appendChild(texttag);
+    });
+});
 // Add the control to the map.
 map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl
 }));
 // to make a marker
-var marker = new mapboxgl.Marker() // initialize a new marker
-    .setLngLat([]) // Marker [lng, lat] coordinates
-    .addTo(map); // Add the marker to the map
 //map scrolling to different locations
 var isAtStart = true;
 var searchinput = null;

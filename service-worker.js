@@ -12,7 +12,8 @@ const assets = [
 "/assests/styles/dist/searchbar.css",
 "/assests/styles/dist/jokes.css",
 "/assests/styles/dist/pictures.css",
-
+"/assests/scripts/dist/page-transition.js",
+"/node_modules/",
 
 
 "/views/pages/index.ejs", 

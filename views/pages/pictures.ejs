@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no" />
 <meta name="HandheldFriendly" content="true">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+<script defer src="/node_modules/swup/dist/swup.min.js"></script>
+<script defer src="/node_modules/@swup/scripts-plugin/dist/SwupScriptsPlugin.js"></script>
+<script defer src="/assests/scripts/dist/page-transition.js" ></script>
     <title>pics</title>
 <link rel="stylesheet" type="text/css" href="/assests/styles/dist/pictures.css">
 <script src="/assests/scripts/dist/sw.js"></script>
@@ -23,7 +25,14 @@
 </head>
 <body>
 <div id="mainwrapper">
+
+
+
+
 <%- include("../partials/top-nav"); %>
+
+<section id="swup" class="transition-fade">
+
 <div id="pictures-container">
 
 
@@ -34,7 +43,7 @@
 
     
 
-
+</section>
 <%- include("../partials/bottom-nav"); %>
 </div>
 
