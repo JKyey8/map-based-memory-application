@@ -13,7 +13,7 @@ const assets = [
 "/assests/styles/dist/jokes.css",
 "/assests/styles/dist/pictures.css",
 "/assests/scripts/dist/page-transition.js",
-"/node_modules/",
+
 
 
 "/views/pages/index.ejs", 
@@ -60,7 +60,7 @@ caches.keys().then(keys => {
 
 
 
-return Promise.all(keys.filter(key => key !== staticCacheName && key !== dynamicCacheName).map(key => caches.delete(key)))
+return Promise.all(keys.filter(key => key !== staticCacheName && key !== dynamicCacheName || dynamicCacheName !== staticCacheName).map(key => caches.delete(key)))
 
 })
 

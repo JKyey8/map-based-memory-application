@@ -42,3 +42,21 @@ display: none;
 
 
 
+
+
+@media all and (display-mode: standalone) {
+  body {
+    background-color: yellow;
+  }
+
+
+#map-description-container{
+
+
+
+background-color:pink ;
+
+}
+
+
+}
