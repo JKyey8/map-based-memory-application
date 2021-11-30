@@ -1,8 +1,8 @@
 
 
 {
-"name":"The Story of Us",
-"short_name":"Story of Us",
+"name":"Click me",
+"short_name":"Click me",
 "icons":[
   {
     "src": "icons/manifest-icon-192.maskable.png",
