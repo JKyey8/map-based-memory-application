@@ -28,14 +28,8 @@
   body {
     background-color: yellow;
   }
-  #swup {
-    display: none;
-  }
   #map-description-container {
     background-color: pink;
-  }
-  #mobile-nav {
-    display: none;
   }
 }
 /*# sourceMappingURL=navbar-responsive.css.map */
