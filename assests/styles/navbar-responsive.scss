@@ -25,7 +25,7 @@ display: none;
 
 @media only screen and (min-width: 600px) {
   body {
-    background-color: lightgreen;
+    background-color: lightblue;
   }
 
 
@@ -49,7 +49,12 @@ display: none;
     background-color: yellow;
   }
 
+#swup{
 
+
+
+display: none;
+}
 #map-description-container{
 
 
@@ -58,5 +63,9 @@ background-color:pink ;
 
 }
 
+#mobile-nav{
 
+display: none;
+
+}
 }

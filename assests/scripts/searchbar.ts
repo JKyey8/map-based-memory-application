@@ -8,7 +8,7 @@
 
 
 //can change
-var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", ];
+var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", "place", "another place", "a third place???", "a fourth", "1","2","3","4","5", ];
 
 
 displayLocation()
@@ -21,7 +21,7 @@ async function displayLocation(){
 var searchquery = document.querySelector("#nav-searchbar").value;
 
 
-await datePlaces.forEach((location) => {
+ datePlaces.forEach((location) => {
  let searchDropdown = document.getElementById("searchbar-dropdown")
 let searchablelocation= document.createElement("h3")
 searchablelocation.id = "location-" + location
@@ -93,7 +93,7 @@ document.getElementById("location-" + location).style.display = "none"
 
 if(searchquery == ""){
 
-document.getElementById("searchbar-dropdown-container").style.display = "none"
+document.getElementById("searchbar-dropdown-container").style.display = "flex"
 
 }
 

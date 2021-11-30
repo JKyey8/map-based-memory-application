@@ -37,27 +37,22 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 //defined variables
 //can change
-var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",];
+var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", "place", "another place", "a third place???", "a fourth", "1", "2", "3", "4", "5",];
 displayLocation();
 function displayLocation() {
     return __awaiter(this, void 0, void 0, function () {
         var searchquery;
         return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    searchquery = document.querySelector("#nav-searchbar").value;
-                    return [4 /*yield*/, datePlaces.forEach(function (location) {
-                            var searchDropdown = document.getElementById("searchbar-dropdown");
-                            var searchablelocation = document.createElement("h3");
-                            searchablelocation.id = "location-" + location;
-                            searchablelocation.className = "nav-searchable-locations";
-                            searchablelocation.innerHTML = location;
-                            searchDropdown.appendChild(searchablelocation);
-                        })];
-                case 1:
-                    _a.sent();
-                    return [2 /*return*/];
-            }
+            searchquery = document.querySelector("#nav-searchbar").value;
+            datePlaces.forEach(function (location) {
+                var searchDropdown = document.getElementById("searchbar-dropdown");
+                var searchablelocation = document.createElement("h3");
+                searchablelocation.id = "location-" + location;
+                searchablelocation.className = "nav-searchable-locations";
+                searchablelocation.innerHTML = location;
+                searchDropdown.appendChild(searchablelocation);
+            });
+            return [2 /*return*/];
         });
     });
 }
@@ -83,7 +78,7 @@ document.getElementById("nav-searchbar").addEventListener("keyup", function () {
         }
     });
     if (searchquery == "") {
-        document.getElementById("searchbar-dropdown-container").style.display = "none";
+        document.getElementById("searchbar-dropdown-container").style.display = "flex";
     }
 });
 //search bar
