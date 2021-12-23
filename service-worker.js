@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v1';
-const dynamicCacheName = 'site-dynamic-v1';
+const staticCacheName = 'site-static-v1.0.0.1';
+const dynamicCacheName = 'site-dynamic-v1.0.0.1';
 const assets = [
 
 '/',
@@ -47,6 +47,7 @@ const assets = [
 // install event
 self.addEventListener('install', evt => {
   console.log('service worker installed');
+self.skipWaiting();
   evt.waitUntil(
     caches.open(staticCacheName).then((cache) => {
       console.log('caching shell assets');
@@ -57,6 +58,17 @@ self.addEventListener('install', evt => {
 // activate event
 self.addEventListener('activate', evt => {
   console.log('service worker activated');
+
+
+caches.keys().then(cacheNames => {for (let name of cacheNames) {caches.delete(name);}});
+
+  // Unregister all Service Workers
+  self.registration.unregister()
+
+    .then(() => self.clients.matchAll())
+
+    .then((clients) => clients.forEach(client => client.navigate(client.url)))
+
  evt.waitUntil(
 caches.keys().then(keys => {
 

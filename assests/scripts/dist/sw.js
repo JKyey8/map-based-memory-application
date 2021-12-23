@@ -6,3 +6,11 @@ if ('serviceWorker' in navigator) {
         console.log('Service worker registration failed, error:', error);
     });
 }
+var forceReload = function () {
+    return navigator.serviceWorker
+        .getRegistrations()
+        .then(function (registrations) {
+        return Promise.all(registrations.map(function (r) { return r.unregister(); }));
+    })
+        .then(function () { return window.location.reload(); });
+};

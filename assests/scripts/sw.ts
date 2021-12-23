@@ -6,3 +6,11 @@ if ('serviceWorker' in navigator) {
   .catch(function(error) {
     console.log('Service worker registration failed, error:', error);
   })}
+
+const forceReload = () =>
+  navigator.serviceWorker
+    .getRegistrations()
+    .then((registrations) =>
+      Promise.all(registrations.map((r) => r.unregister())),
+    )
+    .then(() => window.location.reload())

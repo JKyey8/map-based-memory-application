@@ -41,7 +41,7 @@ places:{
 
 };
 
-
+/*
 
 
 //draw map
@@ -55,7 +55,7 @@ zoom: 17 // starting zoom
 
 
 
-
+*/
 
 //markers on the map
 const geojson = {
