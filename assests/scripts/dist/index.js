@@ -137,3 +137,4 @@ document.getElementById("nav-locationsearch").addEventListener("submit", functio
     }
 });
 var stripperpole = [-118.87072630976799, 34.21461781064242];
+document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");

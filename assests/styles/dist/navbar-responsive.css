@@ -7,7 +7,7 @@
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    background-color: #FFFFFF;
   }
 
   header {
@@ -20,7 +20,7 @@
 }
 @media only screen and (min-width: 600px) {
   body {
-    background-color: lightblue;
+    background-color: #FFFFFF;
   }
 
   #mobile-nav {
@@ -33,10 +33,6 @@
 }
 @media all and (display-mode: standalone) {
   body {
-    background-color: yellow;
-  }
-
-  #map-description-container {
-    background-color: pink;
+    background-color: #FFFFFF;
   }
 }

@@ -111,4 +111,12 @@ html.is-animating .transition-fade {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
+.mapboxgl-ctrl-bottom-left {
+  display: none;
+}
 /*# sourceMappingURL=index.css.map */
