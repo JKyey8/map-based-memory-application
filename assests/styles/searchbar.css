@@ -25,6 +25,7 @@
 .nav-searchable-locations {
   width: 75%;
   display: block;
+  text-align: center;
 }
 
 #search-results-container {
@@ -56,51 +57,42 @@
 }
 
 #searchbar-dropdown-container {
-  width: 100%;
+  min-height: 0;
   margin: auto;
-  margin-top: 2vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 80%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  border: 5px solid red;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
 }
 
 #searchbar-dropdown {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 80%;
-  border: 1px solid orange;
-  overflow-y: scroll !important;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  text-align: center;
+  height: 90vh;
 }
 
 #searchbar-dropdown h3 {
-  display: block;
+  font-size: 1.3rem;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 50px;
+  margin: 50px;
+  border-radius: 10rem;
+  color: #000;
+  height: 20px;
+  text-decoration: none;
+}
+
+#container {
+  max-width: 500px;
+  margin: auto;
 }
 /*# sourceMappingURL=searchbar.css.map */

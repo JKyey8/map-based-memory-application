@@ -1,5 +1,10 @@
 //functions to run automatically
+window.onload = () => {
 
+displayLocation();
+
+
+}
 
 //defined variables
 
@@ -8,10 +13,10 @@
 
 
 //can change
-var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", "place", "another place", "a third place???", "a fourth", "1","2","3","4","5", ];
+var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",  ];
 
 
-displayLocation()
+
 
 
 

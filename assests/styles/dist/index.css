@@ -31,7 +31,7 @@ body {
 }
 
 .transition-fade {
-  transition: 0.4s;
+  transition: 0.5s;
   opacity: 1;
 }
 
@@ -64,7 +64,6 @@ html.is-animating .transition-fade {
   width: 100%;
   flex: 20%;
 }
-
 .marker {
   background-image: url("/assests/images/map-marker.png");
   background-position: center;

@@ -41,8 +41,8 @@ places:{
 
 };
 
-/*
 
+/*
 
 //draw map
 	mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
@@ -53,9 +53,9 @@ center: centerMap, // starting position [lng, lat]
 zoom: 17 // starting zoom
 });
 
-
-
 */
+
+
 
 //markers on the map
 const geojson = {
