@@ -17,7 +17,6 @@
   flex-wrap: nowrap;
   position: fixed;
   overflow: hidden;
-  padding-top: env(safe-area-inset-top, 0);
 }
 
 body {
@@ -64,6 +63,7 @@ html.is-animating .transition-fade {
   width: 100%;
   flex: 20%;
 }
+
 .marker {
   background-image: url("/assests/images/map-marker.png");
   background-position: center;
