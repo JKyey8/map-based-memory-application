@@ -12,13 +12,16 @@ border: 0;
   }
 
 
-header{
+
+#header{
 display: none;
 
+}
+#mobile-nav{
+
+display: flex;
 
 }
-
-
 
 }
 
@@ -35,7 +38,11 @@ display: none;
 
 }
 
+header{
+display: flex;
 
+
+}
 
 }
 
