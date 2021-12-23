@@ -114,12 +114,12 @@ document.getElementById("search-button").addEventListener("click", function(){
 document.getElementById("search-results-container").style.display = "block"
 
 
-document.getElementById("header").style.display = "none"
+document.getElementById("header").style.zIndex = "0"
 })
 
 document.getElementById("close-search").addEventListener("click", function(){
 
 document.getElementById("search-results-container").style.display = "none"
 
-document.getElementById("header").style.display = "flex"
+document.getElementById("header").style.zIndex = "5"
 })
