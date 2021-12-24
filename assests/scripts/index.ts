@@ -121,8 +121,6 @@ new mapboxgl.Marker(el)
 
 
 //add descrition on marker click
-
-
 datePlacesnames.forEach((place) => {
 
 document.getElementById(place).addEventListener("click", () => {
@@ -249,3 +247,5 @@ const stripperpole =  [-118.87072630976799, 34.21461781064242]
 
 
 document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;")
+
+

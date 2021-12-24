@@ -76,8 +76,12 @@ html.is-animating .transition-fade {
 }
 
 #jokes-container {
+  margin-top: .5vh;
   -webkit-box-flex: 90%;
       -ms-flex: 90%;
           flex: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=jokes.css.map */

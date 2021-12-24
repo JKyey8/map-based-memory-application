@@ -44,4 +44,5 @@ body {
 
 #pictures-container {
   flex: 90%;
+  margin-top: 0.5vh;
 }
