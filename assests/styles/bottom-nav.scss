@@ -11,7 +11,8 @@ overscroll-behavior: none;
 
 #mobile-nav{
 position: fixed;
-bottom: calc(env(safe-area-inset-bottom));
+bottom: 2vh;
+padding-bottom:calc(env(safe-area-inset-bottom));
 flex: 6%;
 width: 100%;
 display: none;

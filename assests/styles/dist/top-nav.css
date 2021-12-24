@@ -9,7 +9,7 @@ header {
   flex: 8%;
   width: 100%;
   height: 5vh;
-  position: absolute;
+  position: fixed;
   top: 2.5vh;
   display: none;
   z-index: 5;
