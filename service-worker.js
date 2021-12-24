@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v1.0.0.01';
-const dynamicCacheName = 'site-dynamic-v1.0.0.01';
+const staticCacheName = 'site-static-v1.0.0.012';
+const dynamicCacheName = 'site-dynamic-v1.0.0.012';
 const assets = [
 
 '/',
@@ -59,15 +59,6 @@ self.skipWaiting();
 self.addEventListener('activate', evt => {
   console.log('service worker activated');
 
-
-caches.keys().then(cacheNames => {for (let name of cacheNames) {caches.delete(name);}});
-
-  // Unregister all Service Workers
-  self.registration.unregister()
-
-    .then(() => self.clients.matchAll())
-
-    .then((clients) => clients.forEach(client => client.navigate(client.url)))
 
  evt.waitUntil(
 caches.keys().then(keys => {
