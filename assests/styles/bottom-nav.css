@@ -9,7 +9,7 @@
 }
 
 #mobile-nav {
-  position: relative;
+  position: absolute;
   bottom: 2vh;
   padding-bottom: calc(env(safe-area-inset-bottom));
   -webkit-box-flex: 6%;

@@ -68,7 +68,7 @@
   text-align: center;
   height: 90vh;
 }
-#searchbar-dropdown h3 {
+#searchbar-dropdown button {
   font-size: 1.3rem;
   border: 1px solid #ccc;
   background-color: #eee;

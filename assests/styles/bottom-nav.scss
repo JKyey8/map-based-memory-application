@@ -10,7 +10,7 @@ overscroll-behavior: none;
 
 
 #mobile-nav{
-position: relative;
+position: absolute;
 bottom: 2vh;
 padding-bottom:calc(env(safe-area-inset-bottom));
 flex: 6%;

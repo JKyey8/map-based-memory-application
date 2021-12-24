@@ -51,7 +51,7 @@ function displayLocation() {
             searchquery = document.querySelector("#nav-searchbar").value;
             datePlaces.forEach(function (location) {
                 var searchDropdown = document.getElementById("searchbar-dropdown");
-                var searchablelocation = document.createElement("h3");
+                var searchablelocation = document.createElement("button");
                 searchablelocation.id = "location-" + location;
                 searchablelocation.className = "nav-searchable-locations";
                 searchablelocation.innerHTML = location;
