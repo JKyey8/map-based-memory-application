@@ -73,7 +73,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
   height: 90vh;
