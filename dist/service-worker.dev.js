@@ -50,7 +50,7 @@ self.addEventListener('activate', function (evt) {
   });
   evt.waitUntil(caches.keys().then(function (keys) {
     return Promise.all(keys.filter(function (key) {
-      return key !== staticCacheName && key !== dynamicCacheName || staticCacheName != dynamicCacheName;
+      return key !== staticCacheName && key !== dynamicCacheName;
     }).map(function (key) {
       return caches["delete"](key);
     }));

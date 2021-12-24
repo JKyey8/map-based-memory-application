@@ -121,6 +121,8 @@ new mapboxgl.Marker(el)
 
 
 //add descrition on marker click
+
+
 datePlacesnames.forEach((place) => {
 
 document.getElementById(place).addEventListener("click", () => {

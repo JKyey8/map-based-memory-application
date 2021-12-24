@@ -1,4 +1,9 @@
 //functions to run automatically
+document.addEventListener('swup:contentReplaced', function () {
+    displayLocation();
+});
+
+
 window.onload = () => {
 
 displayLocation();

@@ -35,6 +35,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 //functions to run automatically
+document.addEventListener('swup:contentReplaced', function () {
+    displayLocation();
+});
 window.onload = function () {
     displayLocation();
 };
