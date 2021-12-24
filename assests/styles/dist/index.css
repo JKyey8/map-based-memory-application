@@ -63,6 +63,18 @@ html.is-animating .transition-fade {
 #map-description-container {
   width: 100%;
   flex: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#map-description-container #map-title-container {
+  flex: 15%;
+}
+#map-description-container #map-description-container-text {
+  flex: 85%;
+}
+#map-description-container #map-description-container-text .map-description-text {
+  color: blue;
 }
 
 .marker {

@@ -2,7 +2,7 @@
 //defined variables
 var mapboxgl;
 var MapboxGeocoder;
-var datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",];
+var datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
 var movies = [-118.8852489, 34.182057];
 var Hendrixpark = [-118.88335, 34.1932084];
 var library = [-118.8547961, 34.2011644];
@@ -15,7 +15,8 @@ var moviesDescription = "hello";
 var HendrixparkDescription = "hello";
 var libraryDescription = "hello";
 var NPHSDescription = "hello";
-var mapDescription = document.getElementById("map-description-container");
+var mapDescription = document.getElementById("map-description-container-text");
+var mapTitle = document.getElementById("map-title-container");
 //can change
 var centerMap = movies;
 var mapStyle = mapstyleSteet;
@@ -26,18 +27,14 @@ var dateLocations = {
         "school": {}
     }
 };
-/*
-
 //draw map
-    mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
+mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
 var map = new mapboxgl.Map({
-container: "map", // container id
-style: mapStyle, // style URL
-center: centerMap, // starting position [lng, lat]
-zoom: 17 // starting zoom
+    container: "map",
+    style: mapStyle,
+    center: centerMap,
+    zoom: 17 // starting zoom
 });
-
-*/
 //markers on the map
 var geojson = {
     type: 'FeatureCollection',
@@ -86,11 +83,20 @@ datePlacesnames.forEach(function (place) {
     document.getElementById(place).addEventListener("click", function () {
         var removeabletext = document.getElementById("map-description-text");
         removeabletext.remove();
+        var removeabletitle = document.getElementById("map-title-text");
+        removeabletitle.remove();
         var texttag = document.createElement("p");
         texttag.id = "map-description-text";
-        var node = document.createTextNode(dateLocations.places[place].description);
-        texttag.appendChild(node);
+        texttag.className = "map-description-text";
+        var textnode = document.createTextNode(dateLocations.places[place].description);
+        texttag.appendChild(textnode);
         mapDescription.appendChild(texttag);
+        var titletag = document.createElement("h2");
+        var titlenode = document.createTextNode(place);
+        titletag.id = "map-title-text";
+        titletag.className = 'map-title-text';
+        titletag.appendChild(titlenode);
+        mapTitle.appendChild(titletag);
     });
 });
 // Add the control to the map.

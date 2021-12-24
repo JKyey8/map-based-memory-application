@@ -10,7 +10,7 @@
 //defined variables
 var mapboxgl;
 var MapboxGeocoder;
-const datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole", ];
+const datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
 const movies = [-118.8852489, 34.182057]
 const Hendrixpark = [-118.88335 ,34.1932084] 
 const library = [-118.8547961,34.2011644 ]
@@ -23,7 +23,8 @@ const moviesDescription = "hello"
 const HendrixparkDescription = "hello"
 const libraryDescription = "hello"
 const NPHSDescription = "hello"
-const mapDescription = document.getElementById("map-description-container")
+const mapDescription = document.getElementById("map-description-container-text")
+const mapTitle = document.getElementById("map-title-container")
 
 
 
@@ -42,7 +43,7 @@ places:{
 };
 
 
-/*
+
 
 //draw map
 	mapboxgl.accessToken = 'pk.eyJ1IjoicmliYml0d2FycmlvciIsImEiOiJja3diazU4MWswM3kwMnhvNnhzeDh1YTFxIn0.uE_0gehSKGwetvdoKPRVDw';
@@ -53,7 +54,7 @@ center: centerMap, // starting position [lng, lat]
 zoom: 17 // starting zoom
 });
 
-*/
+
 
 
 
@@ -126,18 +127,21 @@ document.getElementById(place).addEventListener("click", () => {
 
 var removeabletext = document.getElementById("map-description-text")
 removeabletext.remove();
-
-
+var removeabletitle = document.getElementById("map-title-text")
+removeabletitle.remove();
 var texttag = document.createElement("p")
 texttag.id = "map-description-text";
-
-
-var node = document.createTextNode(dateLocations.places[place].description)
-
-
-texttag.appendChild(node)
-
+texttag.className = "map-description-text"
+var textnode = document.createTextNode(dateLocations.places[place].description)
+texttag.appendChild(textnode)
 mapDescription.appendChild(texttag)
+
+var titletag = document.createElement("h2")
+var titlenode = document.createTextNode(place)
+titletag.id = "map-title-text";
+titletag.className = 'map-title-text';
+titletag.appendChild(titlenode)
+mapTitle.appendChild(titletag)
 
 })
 
