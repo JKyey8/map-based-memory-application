@@ -1,4 +1,7 @@
 //functions to run automatically
+document.documentElement.addEventListener('touchmove', function (event) {
+    event.preventDefault();
+}, false);
 //defined variables
 var mapboxgl;
 var MapboxGeocoder;
