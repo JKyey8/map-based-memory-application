@@ -85,6 +85,31 @@ MapFlying(location);
 
 
 async function MapFlying(location) {
+
+
+
+const popup = new mapboxgl.Popup({ closeOnClick: true })
+.setLngLat(dateLocations.places[location].coordinates)
+.setHTML(
+        `<h3>${location}</h3>`
+      )
+.addTo(map);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var isAtStart = true
 var target;
 target = isAtStart ? dateLocations.places[location].coordinates: map.center
@@ -106,6 +131,11 @@ return t;
 essential: true
 
 })
+
+
+
+
+
 
 
 }

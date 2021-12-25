@@ -93,8 +93,12 @@ function displayLocation() {
 }
 function MapFlying(location) {
     return __awaiter(this, void 0, void 0, function () {
-        var isAtStart, target;
+        var popup, isAtStart, target;
         return __generator(this, function (_a) {
+            popup = new mapboxgl.Popup({ closeOnClick: true })
+                .setLngLat(dateLocations.places[location].coordinates)
+                .setHTML("<h3>" + location + "</h3>")
+                .addTo(map);
             isAtStart = true;
             target = isAtStart ? dateLocations.places[location].coordinates : map.center;
             isAtStart = !isAtStart;
