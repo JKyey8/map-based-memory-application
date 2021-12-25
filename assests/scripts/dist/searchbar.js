@@ -43,10 +43,11 @@ window.onload = function () {
 };
 //defined variables
 //can change
-var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",];
+var datePlaces = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
 function displayLocation() {
     return __awaiter(this, void 0, void 0, function () {
         var searchquery;
+        var _this = this;
         return __generator(this, function (_a) {
             searchquery = document.querySelector("#nav-searchbar").value;
             datePlaces.forEach(function (location) {
@@ -56,6 +57,58 @@ function displayLocation() {
                 searchablelocation.className = "nav-searchable-locations";
                 searchablelocation.innerHTML = location;
                 searchDropdown.appendChild(searchablelocation);
+                searchablelocation.addEventListener("click", function () { return __awaiter(_this, void 0, void 0, function () {
+                    var removeabletext, removeabletitle, texttag, textnode, titletag, titlenode;
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
+                            case 0:
+                                removeabletext = document.getElementById("map-description-text");
+                                removeabletext.remove();
+                                removeabletitle = document.getElementById("map-title-text");
+                                removeabletitle.remove();
+                                texttag = document.createElement("p");
+                                texttag.id = "map-description-text";
+                                texttag.className = "map-description-text";
+                                textnode = document.createTextNode(dateLocations.places[location].description);
+                                texttag.appendChild(textnode);
+                                mapDescription.appendChild(texttag);
+                                titletag = document.createElement("h2");
+                                titlenode = document.createTextNode(location);
+                                titletag.id = "map-title-text";
+                                titletag.className = 'map-title-text';
+                                titletag.appendChild(titlenode);
+                                return [4 /*yield*/, mapTitle.appendChild(titletag)];
+                            case 1:
+                                _a.sent();
+                                document.getElementById("search-results-container").style.display = "none";
+                                MapFlying(location);
+                                return [2 /*return*/];
+                        }
+                    });
+                }); });
+            });
+            return [2 /*return*/];
+        });
+    });
+}
+function MapFlying(location) {
+    return __awaiter(this, void 0, void 0, function () {
+        var isAtStart, target;
+        return __generator(this, function (_a) {
+            isAtStart = true;
+            target = isAtStart ? dateLocations.places[location].coordinates : map.center;
+            isAtStart = !isAtStart;
+            map.flyTo({
+                center: target,
+                zoom: 17,
+                speed: 0.8,
+                bearing: 0,
+                curve: 1,
+                easing: function (t) {
+                    return t;
+                },
+                // this animation is considered essential with respect to prefers-reduced-motion
+                essential: true
             });
             return [2 /*return*/];
         });

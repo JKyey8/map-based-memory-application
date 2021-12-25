@@ -16,9 +16,8 @@ displayLocation();
 
 
 
-
 //can change
-var datePlaces = ["movies", "Hendrix Park", "Thousand Oaks Community Park", "library", "NPHS", "beach", "theater", "stripper pole",  ];
+var datePlaces = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
 
 
 
@@ -42,12 +41,78 @@ searchablelocation.innerHTML = location
 searchDropdown.appendChild(searchablelocation)
 
 
+searchablelocation.addEventListener("click", async () => {
 
+
+var removeabletext = document.getElementById("map-description-text")
+removeabletext.remove();
+var removeabletitle = document.getElementById("map-title-text")
+removeabletitle.remove();
+var texttag = document.createElement("p")
+texttag.id = "map-description-text";
+texttag.className = "map-description-text"
+var textnode = document.createTextNode(dateLocations.places[location].description)
+texttag.appendChild(textnode)
+mapDescription.appendChild(texttag)
+
+var titletag = document.createElement("h2")
+var titlenode = document.createTextNode(location)
+titletag.id = "map-title-text";
+titletag.className = 'map-title-text';
+titletag.appendChild(titlenode)
+await mapTitle.appendChild(titletag)
+
+
+
+
+document.getElementById("search-results-container").style.display = "none";
+
+
+
+MapFlying(location);
+
+
+})
 
 })
 
 
 }
+
+
+
+
+
+
+async function MapFlying(location) {
+var isAtStart = true
+var target;
+target = isAtStart ? dateLocations.places[location].coordinates: map.center
+
+isAtStart = !isAtStart;
+
+map.flyTo({
+center:target,
+zoom: 17,
+speed:0.8,
+bearing: 0, 
+curve: 1,
+
+easing: function (t) {
+return t;
+},
+ 
+// this animation is considered essential with respect to prefers-reduced-motion
+essential: true
+
+})
+
+
+}
+
+
+
+
 
 
 

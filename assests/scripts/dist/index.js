@@ -25,8 +25,14 @@ var centerMap = movies;
 var mapStyle = mapstyleSteet;
 var dateLocations = {
     places: {
-        "Hendrix Park": { description: "I like to go here to have fun" },
-        "AMC Theater": { description: "we went here on valenitnes day" },
+        "Hendrix Park": {
+            description: "I like to go here to have fun",
+            coordinates: [-118.88335, 34.1932084]
+        },
+        "AMC Theater": {
+            description: "we went here on valenitnes day",
+            coordinates: [-118.8852489, 34.182057]
+        },
         "school": {}
     }
 };
@@ -107,47 +113,5 @@ map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl
 }));
-// to make a marker
-//map scrolling to different locations
-var isAtStart = true;
-var searchinput = null;
-document.getElementById("nav-locationsearch").addEventListener("submit", function (e) {
-    e.preventDefault();
-    //@ts-ignore
-    searchinput = document.getElementById('nav-searchbar').value;
-    console.log(searchinput);
-    if (searchinput == "movies") {
-        var target = isAtStart ? movies : centerMap;
-        isAtStart = !isAtStart;
-        map.flyTo({
-            center: target,
-            zoom: 17,
-            speed: 0.8,
-            bearing: 0,
-            curve: 1,
-            easing: function (t) {
-                return t;
-            },
-            // this animation is considered essential with respect to prefers-reduced-motion
-            essential: true
-        });
-    }
-    else if (searchinput == "park") {
-        var target = isAtStart ? parkbyTOHS : centerMap;
-        isAtStart = !isAtStart;
-        map.flyTo({
-            center: target,
-            zoom: 17,
-            speed: 0.8,
-            bearing: 0,
-            curve: 1,
-            easing: function (t) {
-                return t;
-            },
-            // this animation is considered essential with respect to prefers-reduced-motion
-            essential: true
-        });
-    }
-});
 var stripperpole = [-118.87072630976799, 34.21461781064242];
 document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");
