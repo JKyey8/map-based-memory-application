@@ -76,12 +76,19 @@ html.is-animating .transition-fade {
 }
 
 #jokes-container {
-  margin-top: .5vh;
+  background-color: antiquewhite;
   -webkit-box-flex: 90%;
       -ms-flex: 90%;
           flex: 90%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=jokes.css.map */

@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v2.00.1';
-const dynamicCacheName = 'site-dynamic-v2.00.1';
+const staticCacheName = 'site-static-v2.00.2';
+const dynamicCacheName = 'site-dynamic-v2.00.2';
 const assets = [
 
 '/',
@@ -66,7 +66,7 @@ caches.keys().then(keys => {
 
 
 
-return Promise.all(keys.filter(key => key !== staticCacheName && key !== dynamicCacheName  ).map(key => caches.delete(key)))
+return Promise.all(keys.filter(key => key !== staticCacheName && key !== dynamicCacheName ).map(key => caches.delete(key)))
 
 })
 

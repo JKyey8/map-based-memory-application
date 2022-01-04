@@ -52,7 +52,10 @@ html.is-animating .transition-fade {
 }
 
 #jokes-container {
-  margin-top: 0.5vh;
+  background-color: antiquewhite;
   flex: 90%;
   align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

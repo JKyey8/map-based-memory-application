@@ -1,5 +1,14 @@
 //functions to run automatically
+document.onload = () => {
 
+var map = new mapboxgl.Map({
+container: "map", // container id
+style: mapStyle, // style URL
+center: centerMap, // starting position [lng, lat]
+zoom: 17 // starting zoom
+});
+
+}
 
 document.documentElement.addEventListener('touchmove', function (event) {
     event.preventDefault();      

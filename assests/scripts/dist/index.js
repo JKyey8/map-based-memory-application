@@ -1,4 +1,12 @@
 //functions to run automatically
+document.onload = function () {
+    var map = new mapboxgl.Map({
+        container: "map",
+        style: mapStyle,
+        center: centerMap,
+        zoom: 17 // starting zoom
+    });
+};
 document.documentElement.addEventListener('touchmove', function (event) {
     event.preventDefault();
 }, false);
