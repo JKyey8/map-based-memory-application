@@ -9,13 +9,15 @@
 }
 
 #mobile-nav {
-  position: absolute;
-  bottom: 2vh;
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom));
   -webkit-box-flex: 6%;
       -ms-flex: 6%;
           flex: 6%;
   width: 100%;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;

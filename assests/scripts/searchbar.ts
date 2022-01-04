@@ -227,4 +227,6 @@ document.getElementById("close-search").addEventListener("click", function(){
 document.getElementById("search-results-container").style.display = "none"
 
 document.getElementById("header").style.zIndex = "5"
+
+
 })

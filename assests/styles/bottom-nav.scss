@@ -10,11 +10,11 @@ overscroll-behavior: none;
 
 
 #mobile-nav{
-position: absolute;
-bottom: 2vh;
+position: fixed;
+bottom: calc(env(safe-area-inset-bottom));
 flex: 6%;
 width: 100%;
-display: none;
+display: flex;
 flex-direction: row;
 justify-content: space-around;
 align-items: center;
