@@ -23,7 +23,7 @@ const assets = [
 "/views/pages/pictures.ejs",
 "/views/pages/inside-jokes.ejs",
 "/views/pages/offline-fallback.ejs",
-"/views/pages/404,ejs",
+"/views/pages/404.ejs",
 
 
 "/views/partials/bottom-nav.ejs",

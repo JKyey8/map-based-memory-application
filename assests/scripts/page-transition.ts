@@ -1,15 +1,18 @@
 
-var SwupScriptsPlugin
-var SwupHeadPlugin;
+var SwupScriptsPlugin =  new SwupScriptsPlugin()
+var SwupHeadPlugin = new SwupHeadPlugin( {
+
+ persistTags: true,
+
+
+
+
+});
 
 //@ts-ignore
 const swup = new Swup({
-  plugins: [new SwupScriptsPlugin(), new SwupHeadPlugin()]
+  plugins: [SwupScriptsPlugin, SwupHeadPlugin ]
 });
-
-
-
-
 
 
 
