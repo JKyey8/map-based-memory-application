@@ -11,7 +11,7 @@ var SwupHeadPlugin = new SwupHeadPlugin( {
 
 //@ts-ignore
 const swup = new Swup({
-  plugins: [SwupScriptsPlugin, SwupHeadPlugin ]
+  plugins: [ SwupScriptsPlugin, SwupHeadPlugin ]
 });
 
 
