@@ -21,4 +21,5 @@
 #mobile-nav a {
   flex: 20%;
   text-align: center;
+  text-decoration: none;
 }

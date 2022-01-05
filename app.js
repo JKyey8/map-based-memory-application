@@ -36,7 +36,9 @@ app.set("partials","./views/partials")
  
 app.get("/", function(req,res) {
 
+
 res.render("index") 
+
 
 });
 
