@@ -110,6 +110,10 @@ html.is-animating .transition-fade {
           flex: 15%;
 }
 
+#map-description-container #map-title-container h2 {
+  color: #0A0A0A;
+}
+
 #map-description-container #map-description-container-text {
   -webkit-box-flex: 85%;
       -ms-flex: 85%;
@@ -117,7 +121,7 @@ html.is-animating .transition-fade {
 }
 
 #map-description-container #map-description-container-text .map-description-text {
-  color: blue;
+  color: #0052F5;
 }
 
 .marker {

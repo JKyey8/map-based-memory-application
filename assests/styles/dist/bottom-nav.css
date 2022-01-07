@@ -17,10 +17,11 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: white;
 }
 #mobile-nav a {
   flex: 20%;
   text-align: center;
   text-decoration: none;
+  color: #0A0A0A;
+  -webkit-tap-highlight-color: transparent;
 }

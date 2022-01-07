@@ -1,3 +1,6 @@
+@import "./colors";
+
+
 *{
 margin: 0;
 padding:0;
@@ -19,13 +22,14 @@ flex-direction: row;
 justify-content: space-around;
 align-items: center;
 text-align: center;
-background-color: white;
+
 
 a{
 flex: 20%;
 text-align: center;
 text-decoration: none;
+color: $black;
 
-
+-webkit-tap-highlight-color: transparent;
 }
 }
