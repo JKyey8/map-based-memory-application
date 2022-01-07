@@ -21,25 +21,20 @@ document.documentElement.addEventListener('touchmove', function (event) {
 var mapboxgl;
 var MapboxGeocoder;
 const datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
-const movies = [-118.8856167, 34.182057]
-const Hendrixpark = [-118.88335 ,34.1932084] 
-const library = [-118.8547961,34.2011644 ]
-const parkbyTOHS = [-118.8724048,34.2132129 ]
-const NPHS = [-118.9544604,34.1844188 ]
-const snapchatHQ = [-118.4532558, 34.0164097]
+
+
+
+
+
 const mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 const mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
-const moviesDescription = "hello"
-const HendrixparkDescription = "hello"
-const libraryDescription = "hello"
-const NPHSDescription = "hello"
 const mapDescription = document.getElementById("map-description-container-text")
 const mapTitle = document.getElementById("map-title-container")
 
 
 
 //can change
-var centerMap = movies;
+var centerMap = [-118.881775, 34.2006482];
 var mapStyle = mapstyleSteet;
 const dateLocations = {
 places:{
@@ -50,11 +45,44 @@ coordinates:[-118.88335 ,34.1932084]
 "AMC Theater":{
 description:"we went here on valenitnes day",
 coordinates:[-118.8856167, 34.182057]
-
-
-
 },
-"school":{},
+"Thousand Oaks Community Park":{
+description:"",
+coordinates:[-118.8724048,34.2132129 ]
+},
+"Thousand Oaks Library":{
+description:"",
+coordinates:[-118.85260, 34.20120 ]
+},
+"NPHS":{
+description:"",
+coordinates:[-118.9544604,34.1844188 ]
+},
+"stripper pole":{
+description:"",
+coordinates:[-118.87072630976799, 34.21461781064242]
+},
+"SnapChat HQ":{
+description:"",
+coordinates:[-118.4532558, 34.0164097]
+},
+"Gatorade HQ":{
+description:"",
+coordinates:[ -87.64233035323404, 41.88033851952631]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 };
@@ -68,70 +96,9 @@ var map = new mapboxgl.Map({
 container: "map", // container id
 style: mapStyle, // style URL
 center: centerMap, // starting position [lng, lat]
-zoom: 17 // starting zoom
+zoom: 10 // starting zoom
 });
 
-
-
- 
-
-//markers on the map
-const geojson = {
-  type: 'FeatureCollection',
-  features: [
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-118.8856167, 34.182057]
-      },
-      properties: {
-        title: 'AMC Theater',
-        description: 'movies'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-118.88335 ,34.1932084]
-      },
-      properties: {
-        title: 'Hendrix Park',
-        description: 'Most visited Park'
-      }
-    }
-  ]
-};
-
-
-
-// add markers to map
-for (const feature of geojson.features) {
-  // create a HTML element for each feature
-  const el = document.createElement('div');
-  el.id = feature.properties.title;
-  el.className = 'marker' 
- 
-
-
-  // make a marker for each feature and add to the map
-  var marker = new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates)
-
-
-
-new mapboxgl.Marker(el)
-  .setLngLat(feature.geometry.coordinates)
-  .setPopup(
-    new mapboxgl.Popup({ offset: 0 }) // add popups
-      .setHTML(
-        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
-      )
-  )
-  .addTo(map)
-
-
-}
 
 
 
@@ -139,6 +106,27 @@ new mapboxgl.Marker(el)
 
 //add descrition on marker click
 datePlacesnames.forEach((place) => {
+
+
+const el = document.createElement('div');
+  el.id = place
+  el.className = 'marker' 
+
+ var marker = new mapboxgl.Marker(el).setLngLat(dateLocations.places[place].coordinates)
+
+
+
+new mapboxgl.Marker(el)
+  .setLngLat(dateLocations.places[place].coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 0 }) // add popups
+      .setHTML(
+        `<h3>${place}</h3>`
+      )
+  )
+  .addTo(map)
+
+
 
 document.getElementById(place).addEventListener("click", () => {
 
@@ -163,6 +151,12 @@ mapTitle.appendChild(titletag)
 })
 
 
+
+
+
+
+
+
 })
 
 
@@ -176,7 +170,7 @@ mapboxgl: mapboxgl
 
 
 
-const stripperpole =  [-118.87072630976799, 34.21461781064242]
+
 
 
 

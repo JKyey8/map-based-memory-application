@@ -17,6 +17,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  background-color: white;
 }
 #mobile-nav a {
   flex: 20%;

@@ -28,6 +28,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  background-color: white;
 }
 
 #mobile-nav a {
