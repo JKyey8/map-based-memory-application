@@ -42,6 +42,7 @@ html.is-animating .transition-fade {
 #swup {
   width: 100%;
   height: 100%;
+  border-top: none;
   overscroll-behavior: none;
   flex: 100%;
   display: flex;
@@ -49,6 +50,25 @@ html.is-animating .transition-fade {
   flex-wrap: nowrap;
   position: fixed;
   overflow: hidden;
+}
+
+form {
+  position: fixed;
+  top: 2vh;
+  width: 100%;
+  z-index: 30;
+  text-align: center;
+  background-color: transparent;
+}
+form input {
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 60%;
+  height: 3vh;
+}
+form :focus {
+  outline: none;
 }
 
 #map-container {

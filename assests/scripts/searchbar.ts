@@ -214,7 +214,7 @@ document.getElementById("searchbar-dropdown-container").style.display = "flex"
 
 //search bar
 
-document.getElementById("search-button").addEventListener("click", function(){
+document.getElementById("nav-searchbar").addEventListener("click", function(){
 
 document.getElementById("search-results-container").style.display = "block"
 
