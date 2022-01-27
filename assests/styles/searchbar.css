@@ -31,13 +31,21 @@
 
 #search-results-container {
   position: absolute;
-  background-color: pink;
+  background-color: #FFFFFF;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   display: none;
   z-index: 5;
+}
+
+#close-search-button {
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+  height: 4vh;
+  z-index: 31;
 }
 
 #searchbar-dropdown-container {
@@ -49,6 +57,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  top: 6.2vh;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   white-space: nowrap;
@@ -57,6 +67,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
@@ -64,14 +77,15 @@
 }
 
 #searchbar-dropdown button {
+  text-align: center;
+  vertical-align: middle;
   font-size: 1.3rem;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  padding: 50px;
-  margin: 50px;
-  border-radius: 10rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 4vh 10vw;
+  margin: 2vh 0vh;
   color: #000;
-  height: 20px;
+  width: 100%;
   text-decoration: none;
 }
 

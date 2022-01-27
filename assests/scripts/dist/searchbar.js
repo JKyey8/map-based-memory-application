@@ -146,9 +146,11 @@ document.getElementById("nav-searchbar").addEventListener("keyup", function () {
 //search bar
 document.getElementById("nav-searchbar").addEventListener("click", function () {
     document.getElementById("search-results-container").style.display = "block";
+    document.getElementById("close-search-button").style.display = "block";
     document.getElementById("header").style.zIndex = "0";
 });
-document.getElementById("close-search").addEventListener("click", function () {
+document.getElementById("close-search-button").addEventListener("click", function () {
     document.getElementById("search-results-container").style.display = "none";
+    document.getElementById("close-search-button").style.display = "none";
     document.getElementById("header").style.zIndex = "5";
 });
