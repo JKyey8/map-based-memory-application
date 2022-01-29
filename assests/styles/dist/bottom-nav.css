@@ -25,3 +25,7 @@
   color: #0A0A0A;
   -webkit-tap-highlight-color: transparent;
 }
+#mobile-nav a i {
+  color: black;
+  font-size: 1.75rem;
+}
