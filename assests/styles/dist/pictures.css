@@ -53,7 +53,7 @@ html.is-animating .transition-fade {
 
 #pictures-container {
   background-color: antiquewhite;
-  flex: 90%;
+  height: 95vh;
   align-items: center;
   flex-direction: column;
   display: flex;

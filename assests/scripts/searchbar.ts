@@ -119,7 +119,7 @@ isAtStart = !isAtStart;
 map.flyTo({
 center:target,
 zoom: 17,
-speed:0.8,
+speed:0.9,
 bearing: 0, 
 curve: 1,
 

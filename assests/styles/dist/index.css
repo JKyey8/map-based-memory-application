@@ -82,19 +82,25 @@ form :focus {
 
 #map-container {
   width: 100%;
-  flex: 78%;
+  height: 95vh;
 }
 #map-container #map {
   width: 100%;
   height: 100%;
 }
+#map-container i {
+  font-size: 3rem;
+  background-size: cover;
+  cursor: pointer;
+}
 
 #map-description-container {
   width: 100%;
   flex: 20%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+  position: absolute;
 }
 #map-description-container #map-title-container {
   flex: 15%;
@@ -107,15 +113,6 @@ form :focus {
 }
 #map-description-container #map-description-container-text .map-description-text {
   color: #0052F5;
-}
-
-.marker {
-  background-image: url("/assests/images/map-marker.png");
-  background-position: center;
-  width: 10%;
-  height: 8%;
-  background-size: cover;
-  cursor: pointer;
 }
 
 .mapboxgl-popup {

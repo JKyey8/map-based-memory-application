@@ -108,9 +108,9 @@ zoom: 10 // starting zoom
 datePlacesnames.forEach((place) => {
 
 
-const el = document.createElement('div');
+const el = document.createElement('i');
   el.id = place
-  el.className = 'marker' 
+  el.className = 'fas fa-map-pin' 
 
  var marker = new mapboxgl.Marker(el).setLngLat(dateLocations.places[place].coordinates)
 
