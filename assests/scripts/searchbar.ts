@@ -17,7 +17,7 @@ displayLocation();
 
 
 //can change
-var datePlaces = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
+var datePlaces = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
 
 
 
@@ -33,10 +33,13 @@ var searchquery = document.querySelector("#nav-searchbar").value;
  datePlaces.forEach((location) => {
  let searchDropdown = document.getElementById("searchbar-dropdown")
 let searchablelocation= document.createElement("button")
+let searchicon = document.createElement("i")
+searchicon.id = "searchicon"
+searchicon.className = "fas fa-search"
 searchablelocation.id = "location-" + location
 searchablelocation.className = "nav-searchable-locations"
 searchablelocation.innerHTML = location
-
+searchablelocation.appendChild(searchicon)
 
 searchDropdown.appendChild(searchablelocation)
 

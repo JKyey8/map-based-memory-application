@@ -13,7 +13,7 @@ document.documentElement.addEventListener('touchmove', function (event) {
 //defined variables
 var mapboxgl;
 var MapboxGeocoder;
-var datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
+var datePlacesnames = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
 var mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 var mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
 var mapDescription = document.getElementById("map-description-container-text");
@@ -31,7 +31,7 @@ var dateLocations = {
             description: "we went here on valenitnes day",
             coordinates: [-118.8856167, 34.182057]
         },
-        "Thousand Oaks Community Park": {
+        "TOHS Park": {
             description: "",
             coordinates: [-118.8724048, 34.2132129]
         },

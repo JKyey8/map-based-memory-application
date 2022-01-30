@@ -32,6 +32,9 @@ app.get("/jokes", function (req, res) {
 app.get("/pictures", function (req, res) {
   res.render("pictures");
 });
+app.get("/writings", function (req, res) {
+  res.render("writings");
+});
 app.listen(PORT);
 console.log("listening on http://127.0.0.1:" + PORT + "/"); //get app to reload when chanes are made(look at package.json)
 

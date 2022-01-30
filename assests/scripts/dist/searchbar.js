@@ -43,7 +43,7 @@ window.onload = function () {
 };
 //defined variables
 //can change
-var datePlaces = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
+var datePlaces = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
 function displayLocation() {
     return __awaiter(this, void 0, void 0, function () {
         var searchquery;
@@ -53,9 +53,13 @@ function displayLocation() {
             datePlaces.forEach(function (location) {
                 var searchDropdown = document.getElementById("searchbar-dropdown");
                 var searchablelocation = document.createElement("button");
+                var searchicon = document.createElement("i");
+                searchicon.id = "searchicon";
+                searchicon.className = "fas fa-search";
                 searchablelocation.id = "location-" + location;
                 searchablelocation.className = "nav-searchable-locations";
                 searchablelocation.innerHTML = location;
+                searchablelocation.appendChild(searchicon);
                 searchDropdown.appendChild(searchablelocation);
                 searchablelocation.addEventListener("click", function () { return __awaiter(_this, void 0, void 0, function () {
                     var removeabletext, removeabletitle, texttag, textnode, titletag, titlenode;

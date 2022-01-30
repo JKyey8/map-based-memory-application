@@ -75,9 +75,14 @@ form :focus {
   position: fixed;
   top: 2vh;
   left: 2vw;
-  height: 4vh;
+  height: 5vh;
+  text-align: center;
+  background-color: transparent;
+  width: 8vw;
   z-index: 31;
   display: none;
+  font-size: 2rem;
+  border-radius: 50%;
 }
 
 #map-container {

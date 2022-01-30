@@ -20,7 +20,7 @@ document.documentElement.addEventListener('touchmove', function (event) {
 //defined variables
 var mapboxgl;
 var MapboxGeocoder;
-const datePlacesnames = ["AMC Theater", "Hendrix Park", "Thousand Oaks Community Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
+const datePlacesnames = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
 
 
 
@@ -46,7 +46,7 @@ coordinates:[-118.88335 ,34.1932084]
 description:"we went here on valenitnes day",
 coordinates:[-118.8856167, 34.182057]
 },
-"Thousand Oaks Community Park":{
+"TOHS Park":{
 description:"",
 coordinates:[-118.8724048,34.2132129 ]
 },
