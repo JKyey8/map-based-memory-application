@@ -41,7 +41,10 @@ document.addEventListener('swup:contentReplaced', function () {
 window.onload = function () {
     displayLocation();
 };
-//defined variables
+addEventListener("load", function () {
+    var viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+});
 //can change
 var datePlaces = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
 function displayLocation() {

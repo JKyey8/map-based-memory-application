@@ -11,7 +11,7 @@
   position: fixed;
   bottom: calc(env(safe-area-inset-bottom));
   width: 100%;
-  height: 5vh;
+  height: 6vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -29,7 +29,7 @@
 }
 #mobile-nav a i {
   color: #0A0A0A;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 #mobile-nav :last-child {
   border-right: transparent;
