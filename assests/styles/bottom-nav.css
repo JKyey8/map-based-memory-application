@@ -27,6 +27,7 @@
           align-items: center;
   text-align: center;
   background-color: #FFFFFF;
+  border-top: 1px solid #5C5661;
 }
 
 #mobile-nav a {
@@ -47,5 +48,9 @@
 
 #mobile-nav :last-child {
   border-right: transparent;
+}
+
+#mobile-nav :active {
+  color: red;
 }
 /*# sourceMappingURL=bottom-nav.css.map */

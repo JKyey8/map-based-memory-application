@@ -31,7 +31,7 @@ body {
 }
 
 .transition-fade {
-  transition: 0.5s;
+  transition: 0.2s;
   opacity: 1;
 }
 
@@ -102,22 +102,32 @@ form :focus {
 #map-description-container {
   width: 100%;
   flex: 20%;
-  display: none;
+  display: block;
   flex-direction: column;
   align-items: center;
   position: absolute;
+  height: 17vh;
+  background-color: #FFFFFF;
+  bottom: -17vh;
+  transition: all 1.5s ease;
 }
 #map-description-container #map-title-container {
   flex: 15%;
+  text-align: center;
 }
 #map-description-container #map-title-container h2 {
   color: #0A0A0A;
 }
 #map-description-container #map-description-container-text {
   flex: 85%;
+  text-align: center;
 }
 #map-description-container #map-description-container-text .map-description-text {
   color: #0052F5;
+}
+
+.showMapDescription {
+  bottom: 6vh !important;
 }
 
 .mapboxgl-popup {

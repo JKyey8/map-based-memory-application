@@ -43,6 +43,7 @@ window.onload = function () {
 };
 addEventListener("load", function () {
     var viewport = document.querySelector("meta[name=viewport]");
+    //@ts-ignore
     viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
 });
 //can change
@@ -87,7 +88,9 @@ function displayLocation() {
                                 return [4 /*yield*/, mapTitle.appendChild(titletag)];
                             case 1:
                                 _a.sent();
+                                document.getElementById("map-description-container").classList.add("showMapDescription");
                                 document.getElementById("search-results-container").style.display = "none";
+                                document.getElementById("close-search-button").style.display = "none";
                                 MapFlying(location);
                                 return [2 /*return*/];
                         }

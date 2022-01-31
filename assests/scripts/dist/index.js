@@ -93,7 +93,13 @@ datePlacesnames.forEach(function (place) {
         titletag.className = 'map-title-text';
         titletag.appendChild(titlenode);
         mapTitle.appendChild(titletag);
+        document.getElementById("map-description-container").style.display = "block";
+        document.getElementById("map-description-container").classList.add("showMapDescription");
     });
+    document.getElementById("nono").onclick = function () {
+        console.log("happu");
+        document.getElementById("map-description-container").classList.add("showMapDescription");
+    };
 });
 // Add the control to the map.
 map.addControl(new MapboxGeocoder({

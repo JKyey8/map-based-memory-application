@@ -24,7 +24,7 @@ justify-content: space-around;
 align-items: center;
 text-align: center;
 background-color: $white;
-
+border-top: 1px solid $grey1;
 
 a{
 flex: 25%;
@@ -43,6 +43,11 @@ font-size: 1.5rem;
 }
 }:last-child{
 border-right: transparent;
+
+
+}
+:active{
+color: red;
 
 
 }

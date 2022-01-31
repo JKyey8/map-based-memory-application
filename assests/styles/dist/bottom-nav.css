@@ -18,6 +18,7 @@
   align-items: center;
   text-align: center;
   background-color: #FFFFFF;
+  border-top: 1px solid #5C5661;
 }
 #mobile-nav a {
   flex: 25%;
@@ -33,4 +34,7 @@
 }
 #mobile-nav :last-child {
   border-right: transparent;
+}
+#mobile-nav :active {
+  color: red;
 }

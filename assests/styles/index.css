@@ -46,8 +46,8 @@ body {
 }
 
 .transition-fade {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   opacity: 1;
 }
 
@@ -132,7 +132,7 @@ form :focus {
   -webkit-box-flex: 20%;
       -ms-flex: 20%;
           flex: 20%;
-  display: none;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -141,12 +141,18 @@ form :focus {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  height: 17vh;
+  background-color: #FFFFFF;
+  bottom: -17vh;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
 }
 
 #map-description-container #map-title-container {
   -webkit-box-flex: 15%;
       -ms-flex: 15%;
           flex: 15%;
+  text-align: center;
 }
 
 #map-description-container #map-title-container h2 {
@@ -157,10 +163,15 @@ form :focus {
   -webkit-box-flex: 85%;
       -ms-flex: 85%;
           flex: 85%;
+  text-align: center;
 }
 
 #map-description-container #map-description-container-text .map-description-text {
   color: #0052F5;
+}
+
+.showMapDescription {
+  bottom: 6vh !important;
 }
 
 .mapboxgl-popup {
