@@ -101,6 +101,14 @@ zoom: 10 // starting zoom
 
 
 
+map.on("drag", (e) => {
+console.log("i am bring dragged")
+
+document.getElementById("map-description-container").classList.remove("showMapDescription");
+document.querySelectorAll(".mapboxgl-popup-content")
+
+})
+
 
 
 

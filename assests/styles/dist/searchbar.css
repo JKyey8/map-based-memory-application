@@ -5,6 +5,10 @@
   border: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #searchbar-button-container {
   width: 100%;
   height: 3vh;

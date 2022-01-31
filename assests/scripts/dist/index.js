@@ -65,6 +65,11 @@ var map = new mapboxgl.Map({
     center: centerMap,
     zoom: 10 // starting zoom
 });
+map.on("drag", function (e) {
+    console.log("i am bring dragged");
+    document.getElementById("map-description-container").classList.remove("showMapDescription");
+    document.querySelectorAll(".mapboxgl-popup-content");
+});
 //add descrition on marker click
 datePlacesnames.forEach(function (place) {
     var el = document.createElement('i');

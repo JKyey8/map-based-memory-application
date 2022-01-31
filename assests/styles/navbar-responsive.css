@@ -7,9 +7,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: #FFFFFF;
-  }
   header {
     display: none;
   }
@@ -21,11 +18,8 @@
 }
 
 @media only screen and (min-width: 600px) {
-  body {
-    background-color: #FFFFFF;
-  }
   #mobile-nav {
-    display: none;
+    display: none !important;
   }
   header {
     display: -webkit-box;
