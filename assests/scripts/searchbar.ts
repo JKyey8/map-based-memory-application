@@ -21,7 +21,7 @@ addEventListener("load", function() {
 
 
 //can change
-var datePlaces = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",  ];
+var datePlaces = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "SnapChat HQ", "Gatorade HQ",  ];
 
 
 

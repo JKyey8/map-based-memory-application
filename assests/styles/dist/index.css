@@ -106,24 +106,28 @@ form :focus {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  height: 17vh;
+  height: 18vh;
   background-color: #FFFFFF;
   bottom: -17vh;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 }
 #map-description-container #map-title-container {
-  flex: 15%;
+  max-height: 15%;
+  height: 15%;
   text-align: center;
 }
 #map-description-container #map-title-container h2 {
   color: #0A0A0A;
 }
 #map-description-container #map-description-container-text {
-  flex: 85%;
+  max-height: 85%;
+  height: 85%;
   text-align: center;
+  overflow: none;
 }
 #map-description-container #map-description-container-text .map-description-text {
-  color: #0052F5;
+  color: #0A0A0A;
+  font-size: calc(1.8vmin + 1.35vh);
 }
 
 .showMapDescription {

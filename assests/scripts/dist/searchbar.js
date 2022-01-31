@@ -47,7 +47,7 @@ addEventListener("load", function () {
     viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
 });
 //can change
-var datePlaces = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
+var datePlaces = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "SnapChat HQ", "Gatorade HQ",];
 function displayLocation() {
     return __awaiter(this, void 0, void 0, function () {
         var searchquery;

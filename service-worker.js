@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v1.0.2';
-const dynamicCacheName = 'site-dynamic-v1.0.2';
+const staticCacheName = 'site-static-v1.0.3';
+const dynamicCacheName = 'site-dynamic-v1.0.3';
 const assets = [
 
 '/',
@@ -9,6 +9,7 @@ const assets = [
 "/assests/styles/dist/top-nav.css",
 "/assests/styles/dist/searchbar.css",
 "/assests/scripts/dist/index.js",
+"/assests/styles/dist/writing.css",
 
 
 "/assests/styles/dist/jokes.css",
@@ -22,6 +23,7 @@ const assets = [
 "/views/pages/index.ejs", 
 "/views/pages/pictures.ejs",
 "/views/pages/inside-jokes.ejs",
+"/views/pages/writings.ejs",
 "/views/pages/offline-fallback.ejs",
 "/views/pages/404.ejs",
 

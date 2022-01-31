@@ -13,7 +13,7 @@ document.documentElement.addEventListener('touchmove', function (event) {
 //defined variables
 var mapboxgl;
 var MapboxGeocoder;
-var datePlacesnames = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "stripper pole", "SnapChat HQ", "Gatorade HQ",];
+var datePlacesnames = ["AMC Theater", "Hendrix Park", "TOHS Park", "Thousand Oaks Library", "NPHS", "SnapChat HQ", "Gatorade HQ",];
 var mapstyleSteet = 'mapbox://styles/mapbox/streets-v11';
 var mapstyleSatilite = "mapbox://styles/mapbox/satellite-v9";
 var mapDescription = document.getElementById("map-description-container-text");
@@ -24,35 +24,31 @@ var mapStyle = mapstyleSteet;
 var dateLocations = {
     places: {
         "Hendrix Park": {
-            description: "I like to go here to have fun",
+            description: "We have had quite a few dates here, to be honest. Just spending time with each other eating food and playing games(I'm better at Mario Kart and UNO). We definitely gotta do something similar again because we have not done it in a long time. Also skirts ;)",
             coordinates: [-118.88335, 34.1932084]
         },
         "AMC Theater": {
-            description: "we went here on valenitnes day",
+            description: "We had a date here where we went to watch Sonic the HedgeHog. Kinda weird thinking that was all before covid. I remember we finished the popcorn hella quick like that was hella funny. And then we go Wetzels Pretzels but ordered the wrong thing :( We are definitely gonna see the other Sonic Movie when it comes out tho :)",
             coordinates: [-118.8856167, 34.182057]
         },
         "TOHS Park": {
-            description: "",
+            description: "We have only been here once but we played basketball which is really fun. Also, I got the dream youtooz which you got me for my birthday and we had In'n'Out. I remember they almost ruined your order but thankfully they didn't. Maybe we can one day play tennis and I can show you how good I really am :) Also home of your stripper pole :))))))",
             coordinates: [-118.8724048, 34.2132129]
         },
         "Thousand Oaks Library": {
-            description: "",
+            description: "If imma be honest, we got like no work done when you came. I think you only did like 2 problems and we talked about how your homeschool worked because I was honestly confused. nonetheless, i do remember you had an amazing fit and it was the day we started using wonky :)",
             coordinates: [-118.85260, 34.20120]
         },
         "NPHS": {
-            description: "",
+            description: "Ok well, you literally go to this school now but that is definitely not because of me... We see each other every day which is amazing and I get to make fun of you whenever I want :) But it is nice to see you making new friends and getting along with my friends at the same time. It really makes me happy seeing you happy and I hope we enjoy our last year and a half there together :))",
             coordinates: [-118.9544604, 34.1844188]
         },
-        "stripper pole": {
-            description: "",
-            coordinates: [-118.87072630976799, 34.21461781064242]
-        },
         "SnapChat HQ": {
-            description: "",
+            description: "Weirdly enough, we literally met on Snap through quick add. That will not be weird to me like meeting the love of my life on social media. Dude that is crazy but I'm definitely not complaining cause I get to be with Ziggy whenever I come over ;). OK, Seriously it is gonna be funny telling our kids we met on snap though. ",
             coordinates: [-118.4532558, 34.0164097]
         },
         "Gatorade HQ": {
-            description: "",
+            description: "NIPPLE TIP!!!",
             coordinates: [-87.64233035323404, 41.88033851952631]
         }
     }
@@ -101,10 +97,6 @@ datePlacesnames.forEach(function (place) {
         document.getElementById("map-description-container").style.display = "block";
         document.getElementById("map-description-container").classList.add("showMapDescription");
     });
-    document.getElementById("nono").onclick = function () {
-        console.log("happu");
-        document.getElementById("map-description-container").classList.add("showMapDescription");
-    };
 });
 // Add the control to the map.
 map.addControl(new MapboxGeocoder({

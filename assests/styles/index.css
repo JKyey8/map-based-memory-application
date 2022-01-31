@@ -141,17 +141,16 @@ form :focus {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  height: 17vh;
+  height: 18vh;
   background-color: #FFFFFF;
   bottom: -17vh;
-  -webkit-transition: all 1.5s ease;
-  transition: all 1.5s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #map-description-container #map-title-container {
-  -webkit-box-flex: 15%;
-      -ms-flex: 15%;
-          flex: 15%;
+  max-height: 15%;
+  height: 15%;
   text-align: center;
 }
 
@@ -160,14 +159,15 @@ form :focus {
 }
 
 #map-description-container #map-description-container-text {
-  -webkit-box-flex: 85%;
-      -ms-flex: 85%;
-          flex: 85%;
+  max-height: 85%;
+  height: 85%;
   text-align: center;
+  overflow: none;
 }
 
 #map-description-container #map-description-container-text .map-description-text {
-  color: #0052F5;
+  color: #0A0A0A;
+  font-size: calc(1.8vmin + 1.35vh);
 }
 
 .showMapDescription {
