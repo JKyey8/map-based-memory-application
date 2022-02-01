@@ -5,7 +5,6 @@ window.addEventListener("resize", function (e) {
     }
     else if (window.innerHeight == deviceHeight) {
         document.getElementById("mobile-nav").style.display = "flex";
-        document.getElementById("searchbar-dropdown").style.backgroundColor = "red";
     }
 });
 window.addEventListener("click", function () {
