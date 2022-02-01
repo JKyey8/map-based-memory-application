@@ -67,7 +67,6 @@ var map = new mapboxgl.Map({
     zoom: 10 // starting zoom
 });
 map.on("drag", function (e) {
-    console.log("i am bring dragged");
     document.getElementById("map-description-container").classList.remove("showMapDescription");
     document.querySelectorAll(".mapboxgl-popup-content");
 });
