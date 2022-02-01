@@ -10,6 +10,11 @@ document.onload = function () {
 document.documentElement.addEventListener('touchmove', function (event) {
     event.preventDefault();
 }, false);
+addEventListener("load", function () {
+    var viewport = document.querySelector("meta[name=viewport]");
+    //@ts-ignore
+    viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+});
 //defined variables
 var mapboxgl;
 var MapboxGeocoder;

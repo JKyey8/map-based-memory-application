@@ -15,6 +15,13 @@ document.documentElement.addEventListener('touchmove', function (event) {
 }, false);
 
 
+addEventListener("load", function() {
+    var viewport = document.querySelector("meta[name=viewport]");
+//@ts-ignore
+    viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+})
+
+
 
 
 //defined variables
