@@ -4,5 +4,9 @@ window.addEventListener("resize", function (e) {
     }
     else {
         document.getElementById("mobile-nav").style.display = "flex";
+        document.getElementById("searchbar-dropdown").style.backgroundColor = "red";
     }
+});
+window.addEventListener("click", function () {
+    document.getElementById("mobile-nav").style.display = "flex";
 });

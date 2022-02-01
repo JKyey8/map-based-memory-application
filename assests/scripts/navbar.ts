@@ -8,11 +8,18 @@ document.getElementById("mobile-nav").style.display = "none";
  } else  {
 document.getElementById("mobile-nav").style.display = "flex";
 
-
+document.getElementById("searchbar-dropdown").style.backgroundColor = "red"
 
 }
 
 
       });
+
+
+window.addEventListener("click", () => {
+document.getElementById("mobile-nav").style.display = "flex";
+
+
+})
 
 
