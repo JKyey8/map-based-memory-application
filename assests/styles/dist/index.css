@@ -108,7 +108,7 @@ form :focus {
   position: absolute;
   height: 18vh;
   background-color: #FFFFFF;
-  bottom: -17vh;
+  bottom: -18vh;
   transition: all 1s ease;
 }
 #map-description-container #map-title-container {
