@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v1.0.3';
-const dynamicCacheName = 'site-dynamic-v1.0.3';
+const staticCacheName = 'site-static-v1.0.10';
+const dynamicCacheName = 'site-dynamic-v1.0.10';
 const assets = [
 
 '/',
@@ -39,7 +39,7 @@ const assets = [
 "icons/manifest-icon-192.maskable.png",
 "icons/manifest-icon-512.maskable.png",
 "/assests/scripts/dist/sw.js",
-"/assests/images/map-marker.png",
+
 
  ];
 
