@@ -90,6 +90,8 @@ form :focus {
 #map-container {
   width: 100%;
   height: 95vh;
+  position: fixed;
+  margin-bottom: calc(env(safe-area-inset-bottom) + 5vh );
 }
 #map-container #map {
   width: 100%;
