@@ -21,6 +21,7 @@ flex-direction: column;
 flex-wrap: nowrap;
 position: fixed;
 overflow: hidden;
+background-color: $white;
 padding-top: env(safe-area-inset-top, 0);
 }
 body{
@@ -53,6 +54,7 @@ flex-direction: column;
 flex-wrap: nowrap;
 position: fixed;
 overflow: hidden;
+background-color: $white;
 
 }
 

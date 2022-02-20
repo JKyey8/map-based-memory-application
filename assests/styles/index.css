@@ -26,6 +26,7 @@
       flex-wrap: nowrap;
   position: fixed;
   overflow: hidden;
+  background-color: #FFFFFF;
   padding-top: env(safe-area-inset-top, 0);
 }
 
@@ -74,6 +75,7 @@ html.is-animating .transition-fade {
       flex-wrap: nowrap;
   position: fixed;
   overflow: hidden;
+  background-color: #FFFFFF;
 }
 
 form {

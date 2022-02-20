@@ -18,6 +18,7 @@ bottom: calc(env(safe-area-inset-bottom) );
 
 width: 100%;
 height: 6vh;
+
 display: flex;
 flex-direction: row;
 justify-content: space-around;
@@ -53,5 +54,17 @@ color: red;
 }
 
 
+
+}
+
+
+
+#ios-pill-color{
+position: absolute;
+bottom: 0;
+background-color: $white;
+width: 100vh;
+margin-top: -24vh;
+height:20vh
 
 }
