@@ -98,7 +98,7 @@ datePlacesnames.forEach(function (place) {
         titletag.className = 'map-title-text';
         titletag.appendChild(titlenode);
         mapTitle.appendChild(titletag);
-        document.getElementById("map-description-container").style.display = "block";
+        document.getElementById("map-description-container").style.display = "flex";
         document.getElementById("map-description-container").classList.add("showMapDescription");
     });
 });

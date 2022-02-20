@@ -126,13 +126,17 @@ font-size: 3rem;
 }
 
 
+.showMapDescription{
+bottom: 6vh !important;
+
+}
 
 
 
 #map-description-container{
 width: 100%;
 flex: 20%;
-display: block;
+display: flex;
 flex-direction: column;
 align-items: center;
 position: absolute;
@@ -149,8 +153,12 @@ transition: all 1s ease;
 
 
 #map-title-container{
+flex: 15%;
 max-height: 15%;
+width: 100%;
 height:15%;
+border-bottom: 1px solid $grey1;
+padding-bottom: 3vh;
 text-align: center;
 h2{
 color:$black;
@@ -163,14 +171,15 @@ color:$black;
 
 
 #map-description-container-text{
-max-height: 85%;
-height: 85%;
+height: 75%;
+flex: 86%;
+
 text-align: center;
 overflow: none;
 
 .map-description-text{
 color: $black;
-font-size: calc(1.5vmin + 1.3vh);
+font-size: 93%;
 
 }
 }
@@ -179,10 +188,6 @@ font-size: calc(1.5vmin + 1.3vh);
 
 
 
-.showMapDescription{
-bottom: 6vh !important;
-
-}
 
 
 
