@@ -9,7 +9,7 @@
 
 #mobile-nav {
   position: fixed;
-  bottom: 0;
+  bottom: calc(env(safe-area-inset-bottom) );
   width: 100%;
   height: 6vh;
   padding-bottom: calc(env(safe-area-inset-bottom) );
