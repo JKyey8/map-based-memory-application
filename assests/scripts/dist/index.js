@@ -69,6 +69,10 @@ var map = new mapboxgl.Map({
 map.on("drag", function (e) {
     document.getElementById("map-description-container").classList.remove("showMapDescription");
     document.querySelectorAll(".mapboxgl-popup-content");
+    var popup = document.getElementsByClassName('mapboxgl-popup');
+    if (popup.length) {
+        popup[0].remove();
+    }
 });
 //add descrition on marker click
 datePlacesnames.forEach(function (place) {

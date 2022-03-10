@@ -110,6 +110,14 @@ map.on("drag", (e) => {
 document.getElementById("map-description-container").classList.remove("showMapDescription");
 document.querySelectorAll(".mapboxgl-popup-content")
 
+
+
+
+const popup = document.getElementsByClassName('mapboxgl-popup');
+if ( popup.length ) {
+    popup[0].remove();
+}
+
 })
 
 
@@ -130,12 +138,13 @@ const el = document.createElement('i');
 new mapboxgl.Marker(el)
   .setLngLat(dateLocations.places[place].coordinates)
   .setPopup(
-    new mapboxgl.Popup({ offset: 0 }) // add popups
+  new mapboxgl.Popup({ offset: 0 }) // add popups
       .setHTML(
         `<h3>${place}</h3>`
       )
   )
   .addTo(map)
+
 
 
 

@@ -43,6 +43,6 @@
 @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */
   #mobile-nav {
-    height: 8vh;
+    height: 10vh;
   }
 }
