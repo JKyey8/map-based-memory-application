@@ -185,7 +185,7 @@ form :focus {
 
 #map-description-container #map-description-container-text .map-description-text {
   color: #0A0A0A;
-  font-size: 90%;
+  font-size: 3.61vw;
 }
 
 .mapboxgl-popup {
