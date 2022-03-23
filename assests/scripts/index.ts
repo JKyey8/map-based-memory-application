@@ -10,9 +10,7 @@ zoom: 17 // starting zoom
 
 }
 
-document.documentElement.addEventListener('touchmove', function (event) {
-    event.preventDefault();      
-}, false);
+
 
 
 addEventListener("load", function() {
@@ -107,7 +105,8 @@ zoom: 10 // starting zoom
 map.on("drag", (e) => {
 
 
-document.getElementById("map-description-container").classList.remove("showMapDescription");
+document.getElementById("map-description-container").classList.remove("showMapTitle");
+document.getElementById("map-description-container").classList.remove("showmapDescription");
 document.querySelectorAll(".mapboxgl-popup-content")
 
 
@@ -137,12 +136,16 @@ const el = document.createElement('i');
 
 new mapboxgl.Marker(el)
   .setLngLat(dateLocations.places[place].coordinates)
+
+
   .setPopup(
   new mapboxgl.Popup({ offset: 0 }) // add popups
       .setHTML(
         `<h3>${place}</h3>`
       )
   )
+
+
   .addTo(map)
 
 
@@ -171,7 +174,7 @@ mapTitle.appendChild(titletag)
 
 document.getElementById("map-description-container").style.display = "flex"
 
-document.getElementById("map-description-container").classList.add("showMapDescription");
+document.getElementById("map-description-container").classList.add("showMapTitle");
 
 
 })
@@ -195,6 +198,26 @@ mapboxgl: mapboxgl
 
 
 
-document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;")
+document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");
 
 
+document.getElementById("textbox-move-arrow").addEventListener("mousedown", () => {
+
+
+
+console.log("hey tere")
+
+
+})
+
+
+
+function myFunction(){
+
+document.getElementById("map-description-container").classList.add("showmapDescription");
+
+
+
+
+
+}

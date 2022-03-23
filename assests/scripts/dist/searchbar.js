@@ -88,7 +88,7 @@ function displayLocation() {
                                 return [4 /*yield*/, mapTitle.appendChild(titletag)];
                             case 1:
                                 _a.sent();
-                                document.getElementById("map-description-container").classList.add("showMapDescription");
+                                document.getElementById("map-description-container").classList.add("showMapTitle");
                                 document.getElementById("search-results-container").style.display = "none";
                                 document.getElementById("close-search-button").style.display = "none";
                                 MapFlying(location);

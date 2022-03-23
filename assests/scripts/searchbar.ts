@@ -72,7 +72,7 @@ await mapTitle.appendChild(titletag)
 
 
 
-document.getElementById("map-description-container").classList.add("showMapDescription")
+document.getElementById("map-description-container").classList.add("showMapTitle")
 
 document.getElementById("search-results-container").style.display = "none";
 

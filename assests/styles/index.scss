@@ -128,10 +128,16 @@ font-size: 3rem;
 }
 
 
-.showMapDescription{
-bottom: 6vh !important;
-
+.showMapTitle{
+bottom: -12.75vh !important;
 }
+
+.showmapDescription{
+bottom: 6vh !important;
+}
+
+
+
 
 
 
@@ -139,14 +145,15 @@ bottom: 6vh !important;
 width: 100%;
 flex: 20%;
 display: flex;
+z-index: 100;
 flex-direction: column;
 align-items: center;
 position: absolute;
-height: 18vh;
+height: 23vh;
 background-color: $white;
 bottom: -18vh;
 
-transition: all 1s ease;
+transition: all .950s ease;
 
 
 
@@ -159,14 +166,24 @@ flex: 15%;
 max-height: 15%;
 width: 100%;
 height:15%;
-border-bottom: 1px solid $grey1;
-padding-bottom: 3vh;
+
+
+padding-bottom: 4.1vh;
 text-align: center;
 h2{
 color:$black;
 
 
+}
+i{
+font-size: 1.7rem;
+float: right;
+}
+button{
+float: right;
+}:first-child{
 
+float:left;
 }
 
 }
@@ -181,7 +198,7 @@ overflow: none;
 
 .map-description-text{
 color: $black;
-font-size: 3.61vw+.6vh;
+font-size: calc(3.61vw+.6vh);
 
 }
 }

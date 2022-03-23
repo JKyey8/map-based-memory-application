@@ -103,7 +103,11 @@ form :focus {
   cursor: pointer;
 }
 
-.showMapDescription {
+.showMapTitle {
+  bottom: -12.75vh !important;
+}
+
+.showmapDescription {
   bottom: 6vh !important;
 }
 
@@ -111,25 +115,35 @@ form :focus {
   width: 100%;
   flex: 20%;
   display: flex;
+  z-index: 100;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  height: 18vh;
+  height: 23vh;
   background-color: #FFFFFF;
   bottom: -18vh;
-  transition: all 1s ease;
+  transition: all 0.95s ease;
 }
 #map-description-container #map-title-container {
   flex: 15%;
   max-height: 15%;
   width: 100%;
   height: 15%;
-  border-bottom: 1px solid #5C5661;
-  padding-bottom: 3vh;
+  padding-bottom: 4.1vh;
   text-align: center;
 }
 #map-description-container #map-title-container h2 {
   color: #0A0A0A;
+}
+#map-description-container #map-title-container i {
+  font-size: 1.7rem;
+  float: right;
+}
+#map-description-container #map-title-container button {
+  float: right;
+}
+#map-description-container #map-title-container :first-child {
+  float: left;
 }
 #map-description-container #map-description-container-text {
   height: 75%;
@@ -139,7 +153,7 @@ form :focus {
 }
 #map-description-container #map-description-container-text .map-description-text {
   color: #0A0A0A;
-  font-size: 3.61vw;
+  font-size: calc(3.61vw+.6vh);
 }
 
 .mapboxgl-popup {

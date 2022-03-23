@@ -7,9 +7,6 @@ document.onload = function () {
         zoom: 17 // starting zoom
     });
 };
-document.documentElement.addEventListener('touchmove', function (event) {
-    event.preventDefault();
-}, false);
 addEventListener("load", function () {
     var viewport = document.querySelector("meta[name=viewport]");
     //@ts-ignore
@@ -67,7 +64,8 @@ var map = new mapboxgl.Map({
     zoom: 10 // starting zoom
 });
 map.on("drag", function (e) {
-    document.getElementById("map-description-container").classList.remove("showMapDescription");
+    document.getElementById("map-description-container").classList.remove("showMapTitle");
+    document.getElementById("map-description-container").classList.remove("showmapDescription");
     document.querySelectorAll(".mapboxgl-popup-content");
     var popup = document.getElementsByClassName('mapboxgl-popup');
     if (popup.length) {
@@ -103,7 +101,7 @@ datePlacesnames.forEach(function (place) {
         titletag.appendChild(titlenode);
         mapTitle.appendChild(titletag);
         document.getElementById("map-description-container").style.display = "flex";
-        document.getElementById("map-description-container").classList.add("showMapDescription");
+        document.getElementById("map-description-container").classList.add("showMapTitle");
     });
 });
 // Add the control to the map.
@@ -112,3 +110,9 @@ map.addControl(new MapboxGeocoder({
     mapboxgl: mapboxgl
 }));
 document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");
+document.getElementById("textbox-move-arrow").addEventListener("mousedown", function () {
+    console.log("hey tere");
+});
+function myFunction() {
+    document.getElementById("map-description-container").classList.add("showmapDescription");
+}
