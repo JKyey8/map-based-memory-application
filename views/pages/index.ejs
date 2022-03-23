@@ -83,6 +83,13 @@
 </form>
 
 
+<section id="map-container">
+
+<div id="map"></div>
+
+</section>
+
+
 <!-- Load the `mapbox-gl-geocoder` plugin. -->
 
 <!--
@@ -103,17 +110,17 @@
 
 
 
-<div id="map-description-container">
+<div id="map-description-container" onclick="moveDown()">
 
 
 
 
 <div id="map-title-container">
-<button onclick="myFunction()" id="textbox-move-arrow"><i class="fas fa-angle-up" ></i></button>
+<button onclick="DescriptionContainerUp()" id="textbox-move-arrow"><i class="fas fa-angle-up" ></i></button>
 
 <h2 id="map-title-text"></h2>
 
-<button onclick="myFunction()" id="textbox-move-arrow"><i class="fas fa-angle-up" ></i></button>
+<button onclick="DescriptionContainerUp()" id="textbox-move-arrow"><i class="fas fa-angle-up" ></i></button>
 
  </div>
 
@@ -129,11 +136,7 @@
 </div>
 
 </div>
-<section id="map-container">
 
-<div id="map"></div>
-
-</section>
 
 
 </section>

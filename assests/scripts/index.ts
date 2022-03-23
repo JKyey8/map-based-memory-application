@@ -194,30 +194,43 @@ mapboxgl: mapboxgl
 
 
 
-
-
-
-
 document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");
 
 
-document.getElementById("textbox-move-arrow").addEventListener("mousedown", () => {
 
-
-
-console.log("hey tere")
-
-
-})
-
-
-
-function myFunction(){
+function DescriptionContainerUp(){
 
 document.getElementById("map-description-container").classList.add("showmapDescription");
 
+}
 
+
+
+
+
+function moveDown(){
+
+const vh = Math.max(document.getElementById("map-description-container").clientHeight || 0, window.innerHeight || 0)
+const WindowY = window.scrollY + document.getElementById("map-description-container").getBoundingClientRect().bottom
+
+
+
+
+
+if(Math.floor(vh-(vh*6/100) + 0.01) == Math.floor(
+WindowY
+
+) ){
+console.log("working")
+document.getElementById("map-description-container").classList.remove("showmapDescription");
+document.getElementById("map-description-container").classList.remove("showMapTitle");
+}
+else{
+
+console.log("nonon")
+}
 
 
 
 }
+
