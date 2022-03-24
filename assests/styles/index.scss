@@ -129,7 +129,7 @@ font-size: 3rem;
 
 
 .showMapTitle{
-bottom: -12.75vh !important;
+bottom: -13.85vh !important;
 }
 
 .showmapDescription{
@@ -149,9 +149,9 @@ z-index: 100;
 flex-direction: column;
 align-items: center;
 position: absolute;
-height: 23vh;
+height: 25vh;
 background-color: $white;
-bottom: -18vh;
+bottom: -19vh;
 
 transition: all .950s ease;
 
@@ -166,23 +166,28 @@ flex: 15%;
 max-height: 15%;
 width: 100%;
 height:15%;
-
-
-padding-bottom: 4.1vh;
+padding-bottom: 5vh;
 text-align: center;
 h2{
 color:$black;
+flex: 85%;
 
+height: 3.75vh;
 
 }
 i{
+vertical-align: top;
+transition:all 1s ease ;
 font-size: 1.7rem;
 float: right;
 }
+
 button{
 float: right;
-}:first-child{
+vertical-align: top;
+height: 3.75vh;
 
+}:first-child{
 float:left;
 }
 

@@ -104,7 +104,7 @@ form :focus {
 }
 
 .showMapTitle {
-  bottom: -12.75vh !important;
+  bottom: -13.85vh !important;
 }
 
 .showmapDescription {
@@ -119,9 +119,9 @@ form :focus {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  height: 23vh;
+  height: 25vh;
   background-color: #FFFFFF;
-  bottom: -18vh;
+  bottom: -19vh;
   transition: all 0.95s ease;
 }
 #map-description-container #map-title-container {
@@ -129,18 +129,24 @@ form :focus {
   max-height: 15%;
   width: 100%;
   height: 15%;
-  padding-bottom: 4.1vh;
+  padding-bottom: 5vh;
   text-align: center;
 }
 #map-description-container #map-title-container h2 {
   color: #0A0A0A;
+  flex: 85%;
+  height: 3.75vh;
 }
 #map-description-container #map-title-container i {
+  vertical-align: top;
+  transition: all 1s ease;
   font-size: 1.7rem;
   float: right;
 }
 #map-description-container #map-title-container button {
   float: right;
+  vertical-align: top;
+  height: 3.75vh;
 }
 #map-description-container #map-title-container :first-child {
   float: left;
