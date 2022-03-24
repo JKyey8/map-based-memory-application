@@ -110,18 +110,47 @@ map.addControl(new MapboxGeocoder({
     mapboxgl: mapboxgl
 }));
 document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");
+var mouseDown = 0;
+document.body.onmousedown = function () {
+    ++mouseDown;
+    console.log(mouseDown);
+};
+document.body.onmouseup = function () {
+    --mouseDown;
+};
 function DescriptionContainerUp() {
     document.getElementById("map-description-container").classList.add("showmapDescription");
 }
-function moveDown() {
-    var vh = Math.max(document.getElementById("map-description-container").clientHeight || 0, window.innerHeight || 0);
-    var WindowY = window.scrollY + document.getElementById("map-description-container").getBoundingClientRect().bottom;
-    if (Math.floor(vh - (vh * 6 / 100) + 0.01) == Math.floor(WindowY)) {
-        console.log("working");
-        document.getElementById("map-description-container").classList.remove("showmapDescription");
-        document.getElementById("map-description-container").classList.remove("showMapTitle");
+function mousemove(event) {
+    console.log("the new position is " + event.changedTouches[0].pageX);
+}
+function chechHold(event) {
+}
+function moveDown(event) {
+    var mouseX = event.clientX;
+    var mouseY = event.clientY;
+    var container = document.getElementById("map-description-container");
+    console.log(event.changedTouches[0].pageX);
+    /*
+    const vh = Math.max(document.getElementById("map-description-container").clientHeight || 0, window.innerHeight || 0)
+    const WindowY = window.scrollY + document.getElementById("map-description-container").getBoundingClientRect().bottom
+    
+    
+    
+    
+    
+    if(Math.floor(vh-(vh*6/100) + 0.01) == Math.floor(
+    WindowY
+    
+    ) ){
+    console.log("working")
+    document.getElementById("map-description-container").classList.remove("showmapDescription");
+    document.getElementById("map-description-container").classList.remove("showMapTitle");
     }
-    else {
-        console.log("nonon");
+    else{
+    
+    console.log("nonon")
     }
+    
+    */
 }

@@ -194,7 +194,32 @@ mapboxgl: mapboxgl
 
 
 
+
+
+
 document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");
+
+
+var mouseDown = 0;
+document.body.onmousedown = function() { 
+  ++mouseDown;
+console.log(mouseDown)
+
+}
+document.body.onmouseup = function() {
+  --mouseDown;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -205,11 +230,35 @@ document.getElementById("map-description-container").classList.add("showmapDescr
 }
 
 
+function mousemove(event){
+
+
+ console.log("the new position is " + event.changedTouches[0].pageX)
+
+}
+
+
+function chechHold(event){
+
+}
 
 
 
-function moveDown(){
 
+
+
+
+function moveDown(event){
+const mouseX = event.clientX;
+const mouseY = event.clientY;
+
+
+const container = document.getElementById("map-description-container")
+console.log(event.changedTouches[0].pageX)
+
+
+
+/*
 const vh = Math.max(document.getElementById("map-description-container").clientHeight || 0, window.innerHeight || 0)
 const WindowY = window.scrollY + document.getElementById("map-description-container").getBoundingClientRect().bottom
 
@@ -230,7 +279,7 @@ else{
 console.log("nonon")
 }
 
-
+*/
 
 }
 

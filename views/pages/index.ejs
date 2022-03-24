@@ -83,7 +83,7 @@
 </form>
 
 
-<section id="map-container">
+<section  id="map-container">
 
 <div id="map"></div>
 
@@ -110,12 +110,12 @@
 
 
 
-<div id="map-description-container" onclick="moveDown()">
+<div id="map-description-container" onmousedown="moveDown(event)" ontouchstart="moveDown(event)" ontouchend="mousemove(event)" onmouseup="mousemove(event)">
 
 
 
 
-<div id="map-title-container">
+<div  id="map-title-container">
 <button onclick="DescriptionContainerUp()" ><i  class="fas fa-times" ></i></button>
 
 
