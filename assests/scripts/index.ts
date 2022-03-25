@@ -233,7 +233,7 @@ document.getElementById("map-description-container").classList.add("showmapDescr
 function mousemove(event){
 
 
- console.log("the new position is " + event.changedTouches[0].pageX)
+// console.log("the new position is " + event.changedTouches[0].pageX)
 
 }
 
@@ -249,12 +249,34 @@ function chechHold(event){
 
 
 function moveDown(event){
-const mouseX = event.clientX;
-const mouseY = event.clientY;
+const mouseX = event.changedTouches[0].pageX;
+const mouseY = event.changedTouches[0].pageY;
 
 
 const container = document.getElementById("map-description-container")
-console.log(event.changedTouches[0].pageX)
+//console.log(event.changedTouches[0].pageX)
+
+
+container.addEventListener("touchmove", function(event){
+const movementY = event.changedTouches[0].pageX
+
+if(mouseY > movementY){
+
+
+console.log("potatoe")
+document.getElementById("map-description-container").classList.remove("showMapTitle");
+document.getElementById("map-description-container").classList.remove("showmapDescription");
+
+
+} else{
+
+console.log("you suck")
+}
+
+
+
+
+})
 
 
 

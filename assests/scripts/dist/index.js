@@ -122,15 +122,26 @@ function DescriptionContainerUp() {
     document.getElementById("map-description-container").classList.add("showmapDescription");
 }
 function mousemove(event) {
-    console.log("the new position is " + event.changedTouches[0].pageX);
+    // console.log("the new position is " + event.changedTouches[0].pageX)
 }
 function chechHold(event) {
 }
 function moveDown(event) {
-    var mouseX = event.clientX;
-    var mouseY = event.clientY;
+    var mouseX = event.changedTouches[0].pageX;
+    var mouseY = event.changedTouches[0].pageY;
     var container = document.getElementById("map-description-container");
-    console.log(event.changedTouches[0].pageX);
+    //console.log(event.changedTouches[0].pageX)
+    container.addEventListener("touchmove", function (event) {
+        var movementY = event.changedTouches[0].pageX;
+        if (mouseY > movementY) {
+            console.log("potatoe");
+            document.getElementById("map-description-container").classList.remove("showMapTitle");
+            document.getElementById("map-description-container").classList.remove("showmapDescription");
+        }
+        else {
+            console.log("you suck");
+        }
+    });
     /*
     const vh = Math.max(document.getElementById("map-description-container").clientHeight || 0, window.innerHeight || 0)
     const WindowY = window.scrollY + document.getElementById("map-description-container").getBoundingClientRect().bottom
