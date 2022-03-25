@@ -182,24 +182,6 @@ form :focus {
   height: 3.75vh;
 }
 
-#map-description-container #map-title-container i {
-  vertical-align: top;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  font-size: 1.7rem;
-  float: right;
-}
-
-#map-description-container #map-title-container button {
-  float: right;
-  vertical-align: top;
-  height: 3.75vh;
-}
-
-#map-description-container #map-title-container :first-child {
-  float: left;
-}
-
 #map-description-container #map-description-container-text {
   height: 75%;
   -webkit-box-flex: 86%;

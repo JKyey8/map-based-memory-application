@@ -134,13 +134,14 @@ function moveDown(event) {
     //console.log(event.changedTouches[0].pageX)
     container.addEventListener("touchmove", function (event) {
         var movementY = event.changedTouches[0].pageY;
-        if (mouseY < movementY) {
-            console.log("potatoe");
-            document.getElementById("map-description-container").classList.remove("showMapTitle");
-            document.getElementById("map-description-container").classList.remove("showmapDescription");
+        if (mouseY < movementY && container.classList.contains("showmapDescription") == true) {
+            container.classList.remove("showmapDescription");
         }
-        else {
-            document.getElementById("map-description-container").classList.add("showmapDescription");
+        else if (mouseY < movementY && container.classList.contains("showmapDescription") == false && container.classList.contains("showMapTitle") == true) {
+            container.classList.remove("showMapTitle");
+        }
+        else if (mouseY > movementY) {
+            container.classList.add("showmapDescription");
         }
     });
     /*

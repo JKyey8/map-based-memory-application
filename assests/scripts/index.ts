@@ -261,17 +261,25 @@ container.addEventListener("touchmove", function(event){
 const movementY = event.changedTouches[0].pageY
 
 
-if(mouseY < movementY){
+if(mouseY < movementY && container.classList.contains("showmapDescription") == true){
 
 
-console.log("potatoe")
-document.getElementById("map-description-container").classList.remove("showMapTitle");
-document.getElementById("map-description-container").classList.remove("showmapDescription");
+
+container.classList.remove("showmapDescription");
 
 
-} else{
+} else if(
+mouseY < movementY && container.classList.contains("showmapDescription") == false && container.classList.contains("showMapTitle") == true){
+container.classList.remove("showMapTitle");
 
-document.getElementById("map-description-container").classList.add("showmapDescription");
+}
+
+
+
+
+ else if(mouseY > movementY){
+
+container.classList.add("showmapDescription");
 
 }
 

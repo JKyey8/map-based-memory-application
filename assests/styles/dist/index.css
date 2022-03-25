@@ -137,20 +137,6 @@ form :focus {
   flex: 85%;
   height: 3.75vh;
 }
-#map-description-container #map-title-container i {
-  vertical-align: top;
-  transition: all 1s ease;
-  font-size: 1.7rem;
-  float: right;
-}
-#map-description-container #map-title-container button {
-  float: right;
-  vertical-align: top;
-  height: 3.75vh;
-}
-#map-description-container #map-title-container :first-child {
-  float: left;
-}
 #map-description-container #map-description-container-text {
   height: 75%;
   flex: 86%;
