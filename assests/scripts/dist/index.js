@@ -129,17 +129,18 @@ function chechHold(event) {
 function moveDown(event) {
     var mouseX = event.changedTouches[0].pageX;
     var mouseY = event.changedTouches[0].pageY;
+    console.log(mouseY);
     var container = document.getElementById("map-description-container");
     //console.log(event.changedTouches[0].pageX)
     container.addEventListener("touchmove", function (event) {
-        var movementY = event.changedTouches[0].pageX;
-        if (mouseY > movementY) {
+        var movementY = event.changedTouches[0].pageY;
+        if (mouseY < movementY) {
             console.log("potatoe");
             document.getElementById("map-description-container").classList.remove("showMapTitle");
             document.getElementById("map-description-container").classList.remove("showmapDescription");
         }
         else {
-            console.log("you suck");
+            document.getElementById("map-description-container").classList.add("showmapDescription");
         }
     });
     /*

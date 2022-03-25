@@ -252,15 +252,16 @@ function moveDown(event){
 const mouseX = event.changedTouches[0].pageX;
 const mouseY = event.changedTouches[0].pageY;
 
-
+console.log(mouseY)
 const container = document.getElementById("map-description-container")
 //console.log(event.changedTouches[0].pageX)
 
 
 container.addEventListener("touchmove", function(event){
-const movementY = event.changedTouches[0].pageX
+const movementY = event.changedTouches[0].pageY
 
-if(mouseY > movementY){
+
+if(mouseY < movementY){
 
 
 console.log("potatoe")
@@ -270,7 +271,8 @@ document.getElementById("map-description-container").classList.remove("showmapDe
 
 } else{
 
-console.log("you suck")
+document.getElementById("map-description-container").classList.add("showmapDescription");
+
 }
 
 
