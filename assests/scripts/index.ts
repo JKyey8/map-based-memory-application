@@ -200,51 +200,6 @@ mapboxgl: mapboxgl
 document.querySelector(".mapboxgl-ctrl-bottom-right").setAttribute("style", "display:none;");
 
 
-var mouseDown = 0;
-document.body.onmousedown = function() { 
-  ++mouseDown;
-console.log(mouseDown)
-
-}
-document.body.onmouseup = function() {
-  --mouseDown;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function DescriptionContainerUp(){
-
-document.getElementById("map-description-container").classList.add("showmapDescription");
-
-}
-
-
-function mousemove(event){
-
-
-// console.log("the new position is " + event.changedTouches[0].pageX)
-
-}
-
-
-function chechHold(event){
-
-}
-
-
-
-
 
 
 
